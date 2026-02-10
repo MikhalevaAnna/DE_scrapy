@@ -1,1 +1,18 @@
-# -DE_scrapy
+### Запуск проекта
+```
+1. Установка зависимостей
+pip install -r requirements.txt
+
+2. Запуск инфраструктуры
+docker-compose up -d
+
+3. Запуск парсера
+cd books_scraper
+
+5. Запуск только 5 записей /  Запуск всех записей
+# scrapy crawl books_toscrape -s CLOSESPIDER_ITEMCOUNT=5 -L INFO
+scrapy crawl books_toscrape
+
+6. Запуск ETL процесса
+python pyspark_etl.py
+```
