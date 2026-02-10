@@ -1,0 +1,18 @@
+# Игнорируемые файлы и директории для Ruff
+.git/
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.csv
+*.txt
+*.log

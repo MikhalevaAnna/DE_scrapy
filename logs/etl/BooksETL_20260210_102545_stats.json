@@ -1,0 +1,17 @@
+{
+  "etl_name": "BooksETL",
+  "success": true,
+  "start_time": "2026-02-10T10:25:25.541786",
+  "end_time": "2026-02-10T10:25:45.872107",
+  "duration_seconds": 20.330321,
+  "statistics": {
+    "etl_run_id": "etl_run_20260210_102525_b2199263",
+    "total_duration_seconds": 20.33,
+    "extraction_records": 1000,
+    "transformation_books": 1000,
+    "quality": 0,
+    "tables_loaded": 4,
+    "spark_application_id": "local-1770708333451",
+    "status": "success"
+  }
+}

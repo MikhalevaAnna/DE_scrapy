@@ -1,0 +1,1616 @@
+2026-02-10 09:10:50 [scrapy.utils.log] INFO: Scrapy 2.11.0 started (bot: books_scraper)
+2026-02-10 09:10:50 [scrapy.utils.log] INFO: Versions: lxml 6.0.2.0, libxml2 2.11.9, cssselect 1.4.0, parsel 1.11.0, w3lib 2.4.0, Twisted 22.10.0, Python 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)], pyOpenSSL 25.3.0 (OpenSSL 3.5.5 27 Jan 2026), cryptography 46.0.4, Platform Windows-10-10.0.19045-SP0
+2026-02-10 09:10:50 [books_toscrape] INFO: Логирование инициализировано. Логи сохраняются в: logs\books_toscrape_20260210_091050.log
+2026-02-10 09:10:50 [scrapy.addons] INFO: Enabled addons:
+[]
+2026-02-10 09:10:50 [py.warnings] WARNING: D:\DE\DE_web_parser\.venv\Lib\site-packages\scrapy\utils\request.py:254: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+2026-02-10 09:10:50 [py.warnings] WARNING: D:\DE\DE_web_parser\.venv\Lib\site-packages\scrapy\extensions\feedexport.py:406: ScrapyDeprecationWarning: The `FEED_URI` and `FEED_FORMAT` settings have been deprecated in favor of the `FEEDS` setting. Please see the `FEEDS` setting docs for more details
+  exporter = cls(crawler)
+
+2026-02-10 09:10:50 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2026-02-10 09:10:50 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'AUTOTHROTTLE_MAX_DELAY': 3.0,
+ 'AUTOTHROTTLE_START_DELAY': 0.5,
+ 'AUTOTHROTTLE_TARGET_CONCURRENCY': 20.0,
+ 'BOT_NAME': 'books_scraper',
+ 'CONCURRENT_REQUESTS': 20,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 20,
+ 'COOKIES_ENABLED': False,
+ 'HTTPCACHE_EXPIRATION_SECS': 3600,
+ 'LOG_FILE': WindowsPath('D:/DE/DE_web_parser/logs/scrapy.log'),
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'books_scraper.spiders',
+ 'RETRY_HTTP_CODES': [500, 502, 503, 504, 408, 429, 403],
+ 'RETRY_TIMES': 3,
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['books_scraper.spiders'],
+ 'TELNETCONSOLE_ENABLED': False,
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'}
+2026-02-10 09:10:51 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: Android
+2026-02-10 09:10:51 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:10:51 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Sony BDV13, Brand: Sony, Model: BDV13
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Nintendo DSi, Brand: Nintendo, Model: DSi
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: Other
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: LYF F90M, Brand: LYF, Model: F90M
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Sony BDV14, Brand: Sony, Model: BDV14
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: LG Web0S SmartTV, Brand: LG, Model: Web0S SmartTV
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Sony BDV11, Brand: Sony, Model: BDV11
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Nintendo DSi, Brand: Nintendo, Model: DSi
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: LYF LF-2403N, Brand: LYF, Model: LF-2403N
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: LYF F90M, Brand: LYF, Model: F90M
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: Applebot
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:10:52 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: Applebot
+2026-02-10 09:10:53 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: Other
+2026-02-10 09:10:53 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: Other
+2026-02-10 09:10:53 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: PhantomJS
+2026-02-10 09:10:53 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: SMTBot
+2026-02-10 09:10:53 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: PhantomJS
+2026-02-10 09:10:53 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: PhantomJS
+2026-02-10 09:10:53 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: WebKit Nightly
+2026-02-10 09:10:53 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: PhantomJS
+2026-02-10 09:10:53 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:10:53 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: PhantomJS
+2026-02-10 09:10:53 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: PhantomJS
+2026-02-10 09:10:53 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: Robot
+2026-02-10 09:10:53 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:10:53 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: Zune
+2026-02-10 09:10:53 [scrapy.middleware] WARNING: Disabled scrapy_selenium.SeleniumMiddleware: SELENIUM_DRIVER_NAME and SELENIUM_DRIVER_EXECUTABLE_PATH must be set
+2026-02-10 09:10:53 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy_user_agents.middlewares.RandomUserAgentMiddleware',
+ 'books_scraper.middlewares.RandomDelayMiddleware',
+ 'books_scraper.middlewares.SeleniumLoggingMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2026-02-10 09:10:53 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2026-02-10 09:10:55 [books_toscrape.pipelines] INFO: 🚀 Запуск пайплайна: DataValidationPipeline
+2026-02-10 09:10:55 [scrapy.middleware] INFO: Enabled item pipelines:
+['books_scraper.pipelines.DataValidationPipeline',
+ 'books_scraper.pipelines.BooksPostgresPipeline']
+2026-02-10 09:10:55 [scrapy.core.engine] INFO: Spider opened
+2026-02-10 09:10:55 [books_toscrape.pipelines] INFO: 🚀 Запуск пайплайна: BooksPostgresPipeline
+2026-02-10 09:10:55 [books_toscrape.pipelines] INFO: 📊 Инициализация БД: Таблица 'raw_books' создана/проверена (27 колонок)
+2026-02-10 09:10:56 [books_toscrape.pipelines] INFO: 🧹 Очистка таблицы 'raw_books': удалено 1000 записей
+2026-02-10 09:10:56 [books_toscrape.pipelines] INFO: 🧹 Очистка таблицы 'raw_books': удалено 1000 записей
+2026-02-10 09:10:56 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2026-02-10 09:10:56 [books_toscrape.middlewares] INFO: ==================================================
+2026-02-10 09:10:56 [books_toscrape.middlewares] INFO: 🎯 ИНИЦИАЛИЗАЦИЯ RANDOM DELAY MIDDLEWARE
+2026-02-10 09:10:56 [books_toscrape.middlewares] INFO: ==================================================
+2026-02-10 09:10:56 [books_toscrape.middlewares] INFO: Диапазон задержек: 0.50 - 2.00 сек
+2026-02-10 09:10:56 [books_toscrape.middlewares] INFO: Базовая задержка: 0.00 сек
+2026-02-10 09:10:56 [books_toscrape.middlewares] INFO: Случайные задержки: True
+2026-02-10 09:10:56 [books_toscrape.middlewares] INFO: Автотроттлинг: True
+2026-02-10 09:10:56 [books_toscrape.middlewares] INFO:   Начальная задержка: 0.5 сек
+2026-02-10 09:10:56 [books_toscrape.middlewares] INFO:   Макс. задержка: 3.0 сек
+2026-02-10 09:10:56 [books_toscrape.middlewares] INFO: ==================================================
+2026-02-10 09:10:56 [books_toscrape.middlewares.selenium] INFO: ==================================================
+2026-02-10 09:10:56 [books_toscrape.middlewares.selenium] INFO: 🔧 НАСТРОЙКИ SELENIUM
+2026-02-10 09:10:56 [books_toscrape.middlewares.selenium] INFO: ==================================================
+2026-02-10 09:10:56 [books_toscrape.middlewares.selenium] INFO: Selenium включен: True
+2026-02-10 09:10:56 [books_toscrape.middlewares.selenium] INFO: Драйвер: chrome
+2026-02-10 09:10:56 [books_toscrape.middlewares.selenium] INFO: Headless режим: True
+2026-02-10 09:10:56 [books_toscrape.middlewares.selenium] INFO: Аргументы: ['--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu']...
+2026-02-10 09:10:56 [books_toscrape.middlewares.selenium] INFO: ==================================================
+2026-02-10 09:10:56 [books_toscrape] INFO: ======================================================================
+2026-02-10 09:10:56 [books_toscrape] INFO: НАЧАЛО ПАРСИНГА: books_toscrape
+2026-02-10 09:10:56 [books_toscrape] INFO: ======================================================================
+2026-02-10 09:10:56 [books_toscrape] INFO: Настройки: Потоков: 20, Задержки: D-O сек
+2026-02-10 09:10:56 [books_toscrape] INFO: ----------------------------------------------------------------------
+2026-02-10 09:10:56 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.56 сек для http://books.toscrape.com/robots.txt... (мета: генерация)
+2026-02-10 09:11:01 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-2.html
+2026-02-10 09:11:01 [scrapy.core.scraper] ERROR: Spider error processing <GET http://books.toscrape.com/> (referer: None)
+Traceback (most recent call last):
+  File "D:\DE\DE_web_parser\.venv\Lib\site-packages\scrapy\utils\defer.py", line 279, in iter_errback
+    yield next(it)
+          ^^^^^^^^
+  File "D:\DE\DE_web_parser\.venv\Lib\site-packages\scrapy\utils\python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "D:\DE\DE_web_parser\.venv\Lib\site-packages\scrapy\utils\python.py", line 350, in __next__
+    return next(self.data)
+           ^^^^^^^^^^^^^^^
+  File "D:\DE\DE_web_parser\.venv\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    for r in iterable:
+             ^^^^^^^^
+  File "D:\DE\DE_web_parser\.venv\Lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 28, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+                       ^^^^^^^^^^^^
+  File "D:\DE\DE_web_parser\.venv\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    for r in iterable:
+             ^^^^^^^^
+  File "D:\DE\DE_web_parser\.venv\Lib\site-packages\scrapy\spidermiddlewares\referer.py", line 352, in <genexpr>
+    return (self._set_referer(r, response) for r in result or ())
+                                                    ^^^^^^^^^^^^
+  File "D:\DE\DE_web_parser\.venv\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    for r in iterable:
+             ^^^^^^^^
+  File "D:\DE\DE_web_parser\.venv\Lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 27, in <genexpr>
+    return (r for r in result or () if self._filter(r, spider))
+                       ^^^^^^^^^^^^
+  File "D:\DE\DE_web_parser\.venv\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    for r in iterable:
+             ^^^^^^^^
+  File "D:\DE\DE_web_parser\.venv\Lib\site-packages\scrapy\spidermiddlewares\depth.py", line 31, in <genexpr>
+    return (r for r in result or () if self._filter(r, response, spider))
+                       ^^^^^^^^^^^^
+  File "D:\DE\DE_web_parser\.venv\Lib\site-packages\scrapy\core\spidermw.py", line 106, in process_sync
+    for r in iterable:
+             ^^^^^^^^
+  File "D:\DE\DE_web_parser\books_scraper\books_scraper\spiders\books_spider.py", line 122, in parse
+    meta={'download_delay': self.get_random_delay()},
+                            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DE\DE_web_parser\books_scraper\books_scraper\spiders\books_spider.py", line 57, in get_random_delay
+    return random.uniform(*self.delay_range)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Random.uniform() takes 3 positional arguments but 21 were given
+2026-02-10 09:11:10 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #10: http://books.toscrape.com/catalogue/shakespeares-sonnets_989... (ожидание: 3 сек)
+2026-02-10 09:11:17 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.61 сек для http://books.toscrape.com/catalogue/soumission_998/index.htm... (мета: генерация)
+2026-02-10 09:11:19 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #20: http://books.toscrape.com/catalogue/tipping-the-velvet_999/i... (ожидание: 3 сек)
+2026-02-10 09:11:22 [books_toscrape] INFO: [Книга #10] Обработка: http://books.toscrape.com/catalogue/set-me-free_988/index.html
+2026-02-10 09:11:22 [books_toscrape] INFO: [Книга #20] Обработка: http://books.toscrape.com/catalogue/soumission_998/index.html
+2026-02-10 09:11:22 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:11:22 [books_toscrape] INFO: 📖 КНИГА #20
+2026-02-10 09:11:22 [books_toscrape] INFO:   Заголовок: Soumission
+2026-02-10 09:11:22 [books_toscrape] INFO:   Цена: 50.1
+2026-02-10 09:11:22 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:11:22 [books_toscrape] INFO:   Количество: 20
+2026-02-10 09:11:22 [books_toscrape] INFO:   Рейтинг: 1
+2026-02-10 09:11:22 [books_toscrape] INFO:   Категория: Fiction
+2026-02-10 09:11:22 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:11:22 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/soumission_998/index.html
+2026-02-10 09:11:22 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:11:22 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #20: http://books.toscrape.com/catalogue/soumission_998...
+2026-02-10 09:11:22 [scrapy.core.engine] INFO: Closing spider (finished)
+2026-02-10 09:11:22 [books_toscrape.pipelines] INFO: ✅ Пайплайн 'BooksPostgresPipeline' завершен. Обработано items: 20
+2026-02-10 09:11:22 [books_toscrape.pipelines] INFO: 📋 Статистика валидации: {'total_processed': 20, 'inserted': 20, 'updated': 0, 'success_rate': '100.0%'}
+2026-02-10 09:11:22 [books_toscrape.pipelines] INFO: 📋 Статистика валидации: {'Обработано items': 20, 'Очищено цен': 0, 'Очищено чисел': 0, 'Исправлено дат': 20, 'Ошибок валидации': 0, 'Успешность валидации': '100.0%'}
+2026-02-10 09:11:22 [books_toscrape.pipelines] INFO: ✅ Пайплайн 'DataValidationPipeline' завершен. Обработано items: 20
+2026-02-10 09:11:22 [books_toscrape] INFO: ======================================================================
+2026-02-10 09:11:22 [books_toscrape] INFO: ЗАВЕРШЕНИЕ ПАРСИНГА: books_toscrape
+2026-02-10 09:11:22 [books_toscrape] INFO: ======================================================================
+2026-02-10 09:11:22 [books_toscrape] INFO: Причина: finished
+2026-02-10 09:11:22 [books_toscrape] INFO: Обработано страниц: 1
+2026-02-10 09:11:22 [books_toscrape] INFO: Собрано книг: 20
+2026-02-10 09:11:22 [books_toscrape] INFO: Общее время: 32.3 сек
+2026-02-10 09:11:22 [books_toscrape] INFO: Средняя скорость: 0.62 книг/сек
+2026-02-10 09:11:22 [books_toscrape] INFO: Размер файла логов: 34.97 КБ
+2026-02-10 09:11:22 [books_toscrape] INFO: ======================================================================
+2026-02-10 09:11:22 [scrapy.extensions.feedexport] INFO: Stored json feed (20 items) in: file:///D:/DE/DE_web_parser/data/books_full.json
+2026-02-10 09:11:22 [books_toscrape.middlewares] INFO: ==================================================
+2026-02-10 09:11:22 [books_toscrape.middlewares] INFO: 📊 СТАТИСТИКА ЗАДЕРЖЕК
+2026-02-10 09:11:22 [books_toscrape.middlewares] INFO: ==================================================
+2026-02-10 09:11:22 [books_toscrape.middlewares] INFO: Всего запросов: 22
+2026-02-10 09:11:22 [books_toscrape.middlewares] INFO: Общая задержка: 22.01 сек
+2026-02-10 09:11:22 [books_toscrape.middlewares] INFO: Средняя задержка: 1.00 сек
+2026-02-10 09:11:22 [books_toscrape.middlewares] INFO: Минимальная задержка: 1.05 сек
+2026-02-10 09:11:22 [books_toscrape.middlewares] INFO: Максимальная задержка: 1.56 сек
+2026-02-10 09:11:22 [books_toscrape.middlewares] INFO: Топ-5 самых долгих запросов:
+2026-02-10 09:11:22 [books_toscrape.middlewares] INFO:   1.56 сек: http://books.toscrape.com/robots.txt...
+2026-02-10 09:11:22 [books_toscrape.middlewares] INFO:   1.14 сек: http://books.toscrape.com/...
+2026-02-10 09:11:22 [books_toscrape.middlewares] INFO:   1.05 сек: index.html...
+2026-02-10 09:11:22 [books_toscrape.middlewares] INFO: ==================================================
+2026-02-10 09:11:22 [books_toscrape.middlewares.selenium] INFO: ==================================================
+2026-02-10 09:11:22 [books_toscrape.middlewares.selenium] INFO: 📊 СТАТИСТИКА SELENIUM
+2026-02-10 09:11:22 [books_toscrape.middlewares.selenium] INFO: ==================================================
+2026-02-10 09:11:22 [books_toscrape.middlewares.selenium] INFO: Всего запросов: 22
+2026-02-10 09:11:22 [books_toscrape.middlewares.selenium] INFO: Selenium запросов: 20 (90.9%)
+2026-02-10 09:11:22 [books_toscrape.middlewares.selenium] INFO: Обычных запросов: 2 (9.1%)
+2026-02-10 09:11:22 [books_toscrape.middlewares.selenium] INFO: 💡 Примечание: Selenium использовался для детальных страниц книг
+2026-02-10 09:11:22 [books_toscrape.middlewares.selenium] INFO:    для демонстрации работы с динамическим контентом
+2026-02-10 09:11:22 [books_toscrape.middlewares.selenium] INFO: ==================================================
+2026-02-10 09:11:22 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 8412,
+ 'downloader/request_count': 22,
+ 'downloader/request_method_count/GET': 22,
+ 'downloader/response_bytes': 413429,
+ 'downloader/response_count': 22,
+ 'downloader/response_status_count/200': 21,
+ 'downloader/response_status_count/404': 1,
+ 'elapsed_time_seconds': 26.52659,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2026, 2, 10, 6, 11, 22, 544285, tzinfo=datetime.timezone.utc),
+ 'item_scraped_count': 20,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 92,
+ 'log_count/WARNING': 48,
+ 'request_depth_max': 1,
+ 'response_received_count': 22,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/404': 1,
+ 'scheduler/dequeued': 21,
+ 'scheduler/dequeued/memory': 21,
+ 'scheduler/enqueued': 21,
+ 'scheduler/enqueued/memory': 21,
+ 'spider_exceptions/TypeError': 1,
+ 'start_time': datetime.datetime(2026, 2, 10, 6, 10, 56, 17695, tzinfo=datetime.timezone.utc)}
+2026-02-10 09:11:22 [scrapy.core.engine] INFO: Spider closed (finished)
+2026-02-10 09:15:20 [scrapy.utils.log] INFO: Scrapy 2.11.0 started (bot: books_scraper)
+2026-02-10 09:15:20 [scrapy.utils.log] INFO: Versions: lxml 6.0.2.0, libxml2 2.11.9, cssselect 1.4.0, parsel 1.11.0, w3lib 2.4.0, Twisted 22.10.0, Python 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)], pyOpenSSL 25.3.0 (OpenSSL 3.5.5 27 Jan 2026), cryptography 46.0.4, Platform Windows-10-10.0.19045-SP0
+2026-02-10 09:15:20 [books_toscrape] INFO: Логирование инициализировано. Логи сохраняются в: logs\books_toscrape_20260210_091520.log
+2026-02-10 09:15:20 [scrapy.addons] INFO: Enabled addons:
+[]
+2026-02-10 09:15:20 [py.warnings] WARNING: D:\DE\DE_web_parser\.venv\Lib\site-packages\scrapy\utils\request.py:254: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+2026-02-10 09:15:20 [py.warnings] WARNING: D:\DE\DE_web_parser\.venv\Lib\site-packages\scrapy\extensions\feedexport.py:406: ScrapyDeprecationWarning: The `FEED_URI` and `FEED_FORMAT` settings have been deprecated in favor of the `FEEDS` setting. Please see the `FEEDS` setting docs for more details
+  exporter = cls(crawler)
+
+2026-02-10 09:15:20 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2026-02-10 09:15:20 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'AUTOTHROTTLE_MAX_DELAY': 3.0,
+ 'AUTOTHROTTLE_START_DELAY': 0.5,
+ 'AUTOTHROTTLE_TARGET_CONCURRENCY': 20.0,
+ 'BOT_NAME': 'books_scraper',
+ 'CONCURRENT_REQUESTS': 20,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 20,
+ 'COOKIES_ENABLED': False,
+ 'HTTPCACHE_EXPIRATION_SECS': 3600,
+ 'LOG_FILE': WindowsPath('D:/DE/DE_web_parser/logs/scrapy.log'),
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'books_scraper.spiders',
+ 'RETRY_HTTP_CODES': [500, 502, 503, 504, 408, 429, 403],
+ 'RETRY_TIMES': 3,
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['books_scraper.spiders'],
+ 'TELNETCONSOLE_ENABLED': False,
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'}
+2026-02-10 09:15:20 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: Android
+2026-02-10 09:15:20 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:15:20 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:15:20 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:15:20 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Sony BDV13, Brand: Sony, Model: BDV13
+2026-02-10 09:15:20 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Nintendo DSi, Brand: Nintendo, Model: DSi
+2026-02-10 09:15:20 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:15:20 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: Other
+2026-02-10 09:15:20 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: LYF F90M, Brand: LYF, Model: F90M
+2026-02-10 09:15:21 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Sony BDV14, Brand: Sony, Model: BDV14
+2026-02-10 09:15:21 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: LG Web0S SmartTV, Brand: LG, Model: Web0S SmartTV
+2026-02-10 09:15:21 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:15:21 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:15:21 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:15:21 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:15:21 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:15:21 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:15:21 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:15:21 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Sony BDV11, Brand: Sony, Model: BDV11
+2026-02-10 09:15:21 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:15:21 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:15:21 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:15:21 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:15:21 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Nintendo DSi, Brand: Nintendo, Model: DSi
+2026-02-10 09:15:21 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: LYF LF-2403N, Brand: LYF, Model: LF-2403N
+2026-02-10 09:15:21 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: LYF F90M, Brand: LYF, Model: F90M
+2026-02-10 09:15:21 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:15:21 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:15:21 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: Applebot
+2026-02-10 09:15:21 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:15:21 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: Applebot
+2026-02-10 09:15:21 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: Other
+2026-02-10 09:15:21 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: Other
+2026-02-10 09:15:21 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: PhantomJS
+2026-02-10 09:15:21 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: SMTBot
+2026-02-10 09:15:21 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: PhantomJS
+2026-02-10 09:15:22 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: PhantomJS
+2026-02-10 09:15:22 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: WebKit Nightly
+2026-02-10 09:15:22 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: PhantomJS
+2026-02-10 09:15:22 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:15:22 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: PhantomJS
+2026-02-10 09:15:22 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: PhantomJS
+2026-02-10 09:15:22 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: Robot
+2026-02-10 09:15:22 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 09:15:22 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: Zune
+2026-02-10 09:15:22 [scrapy.middleware] WARNING: Disabled scrapy_selenium.SeleniumMiddleware: SELENIUM_DRIVER_NAME and SELENIUM_DRIVER_EXECUTABLE_PATH must be set
+2026-02-10 09:15:22 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy_user_agents.middlewares.RandomUserAgentMiddleware',
+ 'books_scraper.middlewares.RandomDelayMiddleware',
+ 'books_scraper.middlewares.SeleniumLoggingMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2026-02-10 09:15:22 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2026-02-10 09:15:22 [books_toscrape.pipelines] INFO: 🚀 Запуск пайплайна: DataValidationPipeline
+2026-02-10 09:15:22 [scrapy.middleware] INFO: Enabled item pipelines:
+['books_scraper.pipelines.DataValidationPipeline',
+ 'books_scraper.pipelines.BooksPostgresPipeline']
+2026-02-10 09:15:22 [scrapy.core.engine] INFO: Spider opened
+2026-02-10 09:15:22 [books_toscrape.pipelines] INFO: 🚀 Запуск пайплайна: BooksPostgresPipeline
+2026-02-10 09:15:22 [books_toscrape.pipelines] INFO: 📊 Инициализация БД: Таблица 'raw_books' создана/проверена (27 колонок)
+2026-02-10 09:15:22 [books_toscrape.pipelines] INFO: 🧹 Очистка таблицы 'raw_books': удалено 20 записей
+2026-02-10 09:15:22 [books_toscrape.pipelines] INFO: 🧹 Очистка таблицы 'raw_books': удалено 20 записей
+2026-02-10 09:15:22 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2026-02-10 09:15:22 [books_toscrape.middlewares] INFO: ==================================================
+2026-02-10 09:15:22 [books_toscrape.middlewares] INFO: 🎯 ИНИЦИАЛИЗАЦИЯ RANDOM DELAY MIDDLEWARE
+2026-02-10 09:15:22 [books_toscrape.middlewares] INFO: ==================================================
+2026-02-10 09:15:22 [books_toscrape.middlewares] INFO: Диапазон задержек: 0.50 - 2.00 сек
+2026-02-10 09:15:22 [books_toscrape.middlewares] INFO: Базовая задержка: 0.00 сек
+2026-02-10 09:15:22 [books_toscrape.middlewares] INFO: Случайные задержки: True
+2026-02-10 09:15:22 [books_toscrape.middlewares] INFO: Автотроттлинг: True
+2026-02-10 09:15:22 [books_toscrape.middlewares] INFO:   Начальная задержка: 0.5 сек
+2026-02-10 09:15:22 [books_toscrape.middlewares] INFO:   Макс. задержка: 3.0 сек
+2026-02-10 09:15:22 [books_toscrape.middlewares] INFO: ==================================================
+2026-02-10 09:15:22 [books_toscrape.middlewares.selenium] INFO: ==================================================
+2026-02-10 09:15:22 [books_toscrape.middlewares.selenium] INFO: 🔧 НАСТРОЙКИ SELENIUM
+2026-02-10 09:15:22 [books_toscrape.middlewares.selenium] INFO: ==================================================
+2026-02-10 09:15:22 [books_toscrape.middlewares.selenium] INFO: Selenium включен: True
+2026-02-10 09:15:22 [books_toscrape.middlewares.selenium] INFO: Драйвер: chrome
+2026-02-10 09:15:22 [books_toscrape.middlewares.selenium] INFO: Headless режим: True
+2026-02-10 09:15:22 [books_toscrape.middlewares.selenium] INFO: Аргументы: ['--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu']...
+2026-02-10 09:15:22 [books_toscrape.middlewares.selenium] INFO: ==================================================
+2026-02-10 09:15:22 [books_toscrape] INFO: ======================================================================
+2026-02-10 09:15:22 [books_toscrape] INFO: НАЧАЛО ПАРСИНГА: books_toscrape
+2026-02-10 09:15:22 [books_toscrape] INFO: ======================================================================
+2026-02-10 09:15:22 [books_toscrape] INFO: Настройки: Потоков: 20, Задержки: 0.5-2.0 сек
+2026-02-10 09:15:22 [books_toscrape] INFO: ----------------------------------------------------------------------
+2026-02-10 09:15:22 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.23 сек для http://books.toscrape.com/robots.txt... (мета: генерация)
+2026-02-10 09:15:27 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-2.html
+2026-02-10 09:15:42 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #10: http://books.toscrape.com/catalogue/starving-hearts-triangul... (ожидание: 3 сек)
+2026-02-10 09:15:52 [books_toscrape.middlewares] INFO: ⏱️  Задержка 0.70 сек для http://books.toscrape.com/catalogue/soumission_998/index.htm... (мета: генерация)
+2026-02-10 09:15:57 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #20: http://books.toscrape.com/catalogue/a-light-in-the-attic_100... (ожидание: 3 сек)
+2026-02-10 09:15:57 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-3.html
+2026-02-10 09:16:14 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #30: http://books.toscrape.com/catalogue/the-four-agreements-a-pr... (ожидание: 3 сек)
+2026-02-10 09:16:22 [books_toscrape] INFO: [Книга #10] Обработка: http://books.toscrape.com/catalogue/the-black-maria_991/index.html
+2026-02-10 09:16:22 [scrapy.extensions.logstats] INFO: Crawled 20 pages (at 20 pages/min), scraped 10 items (at 10 items/min)
+2026-02-10 09:16:22 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.69 сек для http://books.toscrape.com/catalogue/chase-me-paris-nights-2_... (мета: генерация)
+2026-02-10 09:16:29 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #40: http://books.toscrape.com/catalogue/in-her-wake_980/index.ht... (ожидание: 3 сек)
+2026-02-10 09:16:29 [books_toscrape] INFO: [Книга #20] Обработка: http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html
+2026-02-10 09:16:29 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:16:29 [books_toscrape] INFO: 📖 КНИГА #20
+2026-02-10 09:16:29 [books_toscrape] INFO:   Заголовок: A Light in the Attic
+2026-02-10 09:16:29 [books_toscrape] INFO:   Цена: 51.77
+2026-02-10 09:16:29 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:16:29 [books_toscrape] INFO:   Количество: 22
+2026-02-10 09:16:29 [books_toscrape] INFO:   Рейтинг: 3
+2026-02-10 09:16:29 [books_toscrape] INFO:   Категория: Poetry
+2026-02-10 09:16:29 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:16:29 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html
+2026-02-10 09:16:29 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:16:29 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #20: http://books.toscrape.com/catalogue/a-light-in-the...
+2026-02-10 09:16:29 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-4.html
+2026-02-10 09:16:39 [books_toscrape.middlewares] INFO: [Прогресс задержек] Запросов: 50, Общая задержка: 68.7 сек, Средняя: 1.37 сек
+2026-02-10 09:16:45 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #50: http://books.toscrape.com/catalogue/unbound-how-eight-techno... (ожидание: 3 сек)
+2026-02-10 09:16:50 [books_toscrape] INFO: [Книга #30] Обработка: http://books.toscrape.com/catalogue/the-five-love-languages-how-to-express-heartfelt-commitment-to-your-mate_969/index.html
+2026-02-10 09:16:51 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.45 сек для http://books.toscrape.com/catalogue/without-borders-wanderlo... (мета: генерация)
+2026-02-10 09:16:57 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #60: http://books.toscrape.com/catalogue/slow-states-of-collapse-... (ожидание: 3 сек)
+2026-02-10 09:16:57 [books_toscrape] INFO: [Книга #40] Обработка: http://books.toscrape.com/catalogue/in-her-wake_980/index.html
+2026-02-10 09:16:57 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:16:57 [books_toscrape] INFO: 📖 КНИГА #40
+2026-02-10 09:16:57 [books_toscrape] INFO:   Заголовок: In Her Wake
+2026-02-10 09:16:57 [books_toscrape] INFO:   Цена: 12.84
+2026-02-10 09:16:57 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:16:57 [books_toscrape] INFO:   Количество: 19
+2026-02-10 09:16:57 [books_toscrape] INFO:   Рейтинг: 1
+2026-02-10 09:16:57 [books_toscrape] INFO:   Категория: Thriller
+2026-02-10 09:16:57 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:16:57 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/in-her-wake_980/index.html
+2026-02-10 09:16:57 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:16:57 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #40: http://books.toscrape.com/catalogue/in-her-wake_98...
+2026-02-10 09:16:57 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-5.html
+2026-02-10 09:17:11 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #70: http://books.toscrape.com/catalogue/the-art-forger_930/index... (ожидание: 3 сек)
+2026-02-10 09:17:11 [books_toscrape] INFO: [Книга #50] Обработка: http://books.toscrape.com/catalogue/unicorn-tracks_951/index.html
+2026-02-10 09:17:17 [books_toscrape.middlewares] INFO: ⏱️  Задержка 0.79 сек для http://books.toscrape.com/catalogue/the-inefficiency-assassi... (мета: генерация)
+2026-02-10 09:17:23 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #80: http://books.toscrape.com/catalogue/the-nameless-city-the-na... (ожидание: 3 сек)
+2026-02-10 09:17:23 [scrapy.extensions.logstats] INFO: Crawled 77 pages (at 57 pages/min), scraped 52 items (at 42 items/min)
+2026-02-10 09:17:23 [books_toscrape] INFO: [Книга #60] Обработка: http://books.toscrape.com/catalogue/the-art-forger_930/index.html
+2026-02-10 09:17:23 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:17:23 [books_toscrape] INFO: 📖 КНИГА #60
+2026-02-10 09:17:23 [books_toscrape] INFO:   Заголовок: The Art Forger
+2026-02-10 09:17:23 [books_toscrape] INFO:   Цена: 40.76
+2026-02-10 09:17:23 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:17:23 [books_toscrape] INFO:   Количество: 16
+2026-02-10 09:17:23 [books_toscrape] INFO:   Рейтинг: 3
+2026-02-10 09:17:23 [books_toscrape] INFO:   Категория: Add a comment
+2026-02-10 09:17:23 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:17:23 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/the-art-forger_930/index.html
+2026-02-10 09:17:23 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:17:23 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #60: http://books.toscrape.com/catalogue/the-art-forger...
+2026-02-10 09:17:23 [books_toscrape] INFO: [Прогресс] Страниц: 5, Книг: 66, Время: 123.2 сек, Скорость: 0.54 книг/сек
+2026-02-10 09:17:23 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-6.html
+2026-02-10 09:17:23 [books_toscrape] INFO: [Книга #70] Обработка: http://books.toscrape.com/catalogue/we-love-you-charlie-freeman_954/index.html
+2026-02-10 09:17:37 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #90: http://books.toscrape.com/catalogue/my-paris-kitchen-recipes... (ожидание: 3 сек)
+2026-02-10 09:17:40 [books_toscrape.middlewares] INFO: [Прогресс задержек] Запросов: 100, Общая задержка: 124.9 сек, Средняя: 1.25 сек
+2026-02-10 09:17:40 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.76 сек для http://books.toscrape.com/catalogue/orange-the-complete-coll... (мета: генерация)
+2026-02-10 09:17:50 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #100: http://books.toscrape.com/catalogue/princess-jellyfish-2-in-... (ожидание: 3 сек)
+2026-02-10 09:17:50 [books_toscrape] INFO: [Книга #80] Обработка: http://books.toscrape.com/catalogue/the-nameless-city-the-nameless-city-1_940/index.html
+2026-02-10 09:17:50 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:17:50 [books_toscrape] INFO: 📖 КНИГА #80
+2026-02-10 09:17:50 [books_toscrape] INFO:   Заголовок: The Nameless City (The Nameless City #1)
+2026-02-10 09:17:50 [books_toscrape] INFO:   Цена: 38.16
+2026-02-10 09:17:50 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:17:50 [books_toscrape] INFO:   Количество: 16
+2026-02-10 09:17:50 [books_toscrape] INFO:   Рейтинг: 4
+2026-02-10 09:17:50 [books_toscrape] INFO:   Категория: Sequential Art
+2026-02-10 09:17:50 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:17:50 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/the-nameless-city-the-nameless-city-1_940/index.html
+2026-02-10 09:17:50 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:17:50 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #80: http://books.toscrape.com/catalogue/the-nameless-c...
+2026-02-10 09:17:50 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-7.html
+2026-02-10 09:18:03 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #110: http://books.toscrape.com/catalogue/dont-be-a-jerk-and-other... (ожидание: 3 сек)
+2026-02-10 09:18:03 [books_toscrape] INFO: [Книга #90] Обработка: http://books.toscrape.com/catalogue/obsidian-lux-1_911/index.html
+2026-02-10 09:18:06 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.09 сек для http://books.toscrape.com/catalogue/first-and-first-five-bor... (мета: генерация)
+2026-02-10 09:18:17 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #120: http://books.toscrape.com/catalogue/immunity-how-elie-metchn... (ожидание: 3 сек)
+2026-02-10 09:18:17 [books_toscrape] INFO: [Книга #100] Обработка: http://books.toscrape.com/catalogue/bitch-planet-vol-1-extraordinary-machine-bitch-planet-collected-editions_882/index.html
+2026-02-10 09:18:17 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:18:17 [books_toscrape] INFO: 📖 КНИГА #100
+2026-02-10 09:18:17 [books_toscrape] INFO:   Заголовок: Bitch Planet, Vol. 1: Extraordinary Machine (Bitch Planet (Collected Editions))
+2026-02-10 09:18:17 [books_toscrape] INFO:   Цена: 37.92
+2026-02-10 09:18:17 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:18:17 [books_toscrape] INFO:   Количество: 16
+2026-02-10 09:18:17 [books_toscrape] INFO:   Рейтинг: 2
+2026-02-10 09:18:17 [books_toscrape] INFO:   Категория: Sequential Art
+2026-02-10 09:18:17 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:18:17 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/bitch-planet-vol-1-extraordinary-machine-bitch-planet-collected-editions_882/index.html
+2026-02-10 09:18:17 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:18:17 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #100: http://books.toscrape.com/catalogue/bitch-planet-v...
+2026-02-10 09:18:17 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-8.html
+2026-02-10 09:18:17 [books_toscrape] INFO: [Книга #110] Обработка: http://books.toscrape.com/catalogue/codename-baboushka-volume-1-the-conclave-of-death_887/index.html
+2026-02-10 09:18:33 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #130: http://books.toscrape.com/catalogue/tuesday-nights-in-1980_8... (ожидание: 3 сек)
+2026-02-10 09:18:33 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.74 сек для http://books.toscrape.com/catalogue/you-are-what-you-love-th... (мета: генерация)
+2026-02-10 09:18:35 [scrapy.extensions.logstats] INFO: Crawled 123 pages (at 46 pages/min), scraped 113 items (at 61 items/min)
+2026-02-10 09:18:44 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #140: http://books.toscrape.com/catalogue/algorithms-to-live-by-th... (ожидание: 3 сек)
+2026-02-10 09:18:44 [books_toscrape] INFO: [Книга #120] Обработка: http://books.toscrape.com/catalogue/immunity-how-elie-metchnikoff-changed-the-course-of-modern-medicine_900/index.html
+2026-02-10 09:18:44 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:18:44 [books_toscrape] INFO: 📖 КНИГА #120
+2026-02-10 09:18:44 [books_toscrape] INFO:   Заголовок: Immunity: How Elie Metchnikoff Changed the Course of Modern Medicine
+2026-02-10 09:18:44 [books_toscrape] INFO:   Цена: 57.36
+2026-02-10 09:18:44 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:18:44 [books_toscrape] INFO:   Количество: 16
+2026-02-10 09:18:44 [books_toscrape] INFO:   Рейтинг: 5
+2026-02-10 09:18:44 [books_toscrape] INFO:   Категория: Science
+2026-02-10 09:18:44 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:18:44 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/immunity-how-elie-metchnikoff-changed-the-course-of-modern-medicine_900/index.html
+2026-02-10 09:18:44 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:18:44 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #120: http://books.toscrape.com/catalogue/immunity-how-e...
+2026-02-10 09:18:44 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-9.html
+2026-02-10 09:18:45 [books_toscrape.middlewares] INFO: [Прогресс задержек] Запросов: 150, Общая задержка: 185.4 сек, Средняя: 1.24 сек
+2026-02-10 09:18:56 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #150: http://books.toscrape.com/catalogue/the-matchmakers-playbook... (ожидание: 3 сек)
+2026-02-10 09:18:56 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.90 сек для http://books.toscrape.com/catalogue/the-mistake-off-campus-2... (мета: генерация)
+2026-02-10 09:19:00 [books_toscrape] INFO: [Книга #130] Обработка: http://books.toscrape.com/catalogue/tuesday-nights-in-1980_870/index.html
+2026-02-10 09:19:09 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #160: http://books.toscrape.com/catalogue/the-shadow-hero-the-shad... (ожидание: 3 сек)
+2026-02-10 09:19:09 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-10.html
+2026-02-10 09:19:09 [books_toscrape] INFO: [Книга #140] Обработка: http://books.toscrape.com/catalogue/a-flight-of-arrows-the-pathfinders-2_876/index.html
+2026-02-10 09:19:09 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:19:09 [books_toscrape] INFO: 📖 КНИГА #140
+2026-02-10 09:19:09 [books_toscrape] INFO:   Заголовок: A Flight of Arrows (The Pathfinders #2)
+2026-02-10 09:19:09 [books_toscrape] INFO:   Цена: 55.53
+2026-02-10 09:19:09 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:19:09 [books_toscrape] INFO:   Количество: 16
+2026-02-10 09:19:09 [books_toscrape] INFO:   Рейтинг: 5
+2026-02-10 09:19:09 [books_toscrape] INFO:   Категория: Historical Fiction
+2026-02-10 09:19:09 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:19:09 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/a-flight-of-arrows-the-pathfinders-2_876/index.html
+2026-02-10 09:19:09 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:19:09 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #140: http://books.toscrape.com/catalogue/a-flight-of-ar...
+2026-02-10 09:19:22 [books_toscrape.middlewares] INFO: ⏱️  Задержка 0.79 сек для http://books.toscrape.com/catalogue/shobu-samurai-project-ar... (мета: генерация)
+2026-02-10 09:19:22 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #170: http://books.toscrape.com/catalogue/shobu-samurai-project-ar... (ожидание: 3 сек)
+2026-02-10 09:19:22 [books_toscrape] INFO: [Книга #150] Обработка: http://books.toscrape.com/catalogue/the-matchmakers-playbook-wingmen-inc-1_850/index.html
+2026-02-10 09:19:22 [scrapy.extensions.logstats] INFO: Crawled 161 pages (at 38 pages/min), scraped 150 items (at 37 items/min)
+2026-02-10 09:19:40 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #180: http://books.toscrape.com/catalogue/the-bridge-to-consciousn... (ожидание: 3 сек)
+2026-02-10 09:19:40 [books_toscrape] INFO: [Прогресс] Страниц: 10, Книг: 157, Время: 260.3 сек, Скорость: 0.60 книг/сек
+2026-02-10 09:19:40 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-11.html
+2026-02-10 09:19:40 [books_toscrape] INFO: [Книга #160] Обработка: http://books.toscrape.com/catalogue/the-regional-office-is-under-attack_858/index.html
+2026-02-10 09:19:40 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:19:40 [books_toscrape] INFO: 📖 КНИГА #160
+2026-02-10 09:19:40 [books_toscrape] INFO:   Заголовок: The Regional Office Is Under Attack!
+2026-02-10 09:19:40 [books_toscrape] INFO:   Цена: 51.36
+2026-02-10 09:19:40 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:19:40 [books_toscrape] INFO:   Количество: 15
+2026-02-10 09:19:40 [books_toscrape] INFO:   Рейтинг: 5
+2026-02-10 09:19:40 [books_toscrape] INFO:   Категория: Fiction
+2026-02-10 09:19:40 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:19:40 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/the-regional-office-is-under-attack_858/index.html
+2026-02-10 09:19:40 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:19:40 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #160: http://books.toscrape.com/catalogue/the-regional-o...
+2026-02-10 09:19:54 [books_toscrape.middlewares] INFO: [Прогресс задержек] Запросов: 200, Общая задержка: 248.8 сек, Средняя: 1.24 сек
+2026-02-10 09:19:54 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.43 сек для http://books.toscrape.com/catalogue/follow-you-home_809/inde... (мета: генерация)
+2026-02-10 09:19:55 [books_toscrape] INFO: [Книга #170] Обработка: http://books.toscrape.com/catalogue/shobu-samurai-project-aryoku-3_830/index.html
+2026-02-10 09:19:57 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #190: http://books.toscrape.com/catalogue/frostbite-vampire-academ... (ожидание: 3 сек)
+2026-02-10 09:20:10 [books_toscrape] INFO: [Книга #180] Обработка: http://books.toscrape.com/catalogue/the-bridge-to-consciousness-im-writing-the-bridge-between-science-and-our-old-and-new-beliefs_840/index.html
+2026-02-10 09:20:10 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:20:10 [books_toscrape] INFO: 📖 КНИГА #180
+2026-02-10 09:20:10 [books_toscrape] INFO:   Заголовок: The Bridge to Consciousness: I'm Writing the Bridge Between Science and Our Old and New Beliefs.
+2026-02-10 09:20:10 [books_toscrape] INFO:   Цена: 32.0
+2026-02-10 09:20:10 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:20:10 [books_toscrape] INFO:   Количество: 15
+2026-02-10 09:20:10 [books_toscrape] INFO:   Рейтинг: 3
+2026-02-10 09:20:10 [books_toscrape] INFO:   Категория: Default
+2026-02-10 09:20:10 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:20:10 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/the-bridge-to-consciousness-im-writing-the-bridge-between-science-and-our-old-and-new-beliefs_840/index.html
+2026-02-10 09:20:10 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:20:10 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #180: http://books.toscrape.com/catalogue/the-bridge-to-...
+2026-02-10 09:20:12 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #200: http://books.toscrape.com/catalogue/modern-romance_820/index... (ожидание: 3 сек)
+2026-02-10 09:20:12 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-12.html
+2026-02-10 09:20:23 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.86 сек для http://books.toscrape.com/catalogue/amid-the-chaos_788/index... (мета: генерация)
+2026-02-10 09:20:25 [scrapy.extensions.logstats] INFO: Crawled 201 pages (at 40 pages/min), scraped 187 items (at 37 items/min)
+2026-02-10 09:20:29 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #210: http://books.toscrape.com/catalogue/anonymous_790/index.html... (ожидание: 3 сек)
+2026-02-10 09:20:30 [books_toscrape] INFO: [Книга #190] Обработка: http://books.toscrape.com/catalogue/frostbite-vampire-academy-2_810/index.html
+2026-02-10 09:20:43 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #220: http://books.toscrape.com/catalogue/dark-notes_800/index.htm... (ожидание: 3 сек)
+2026-02-10 09:20:43 [books_toscrape] INFO: [Книга #200] Обработка: http://books.toscrape.com/catalogue/amatus_787/index.html
+2026-02-10 09:20:43 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:20:43 [books_toscrape] INFO: 📖 КНИГА #200
+2026-02-10 09:20:43 [books_toscrape] INFO:   Заголовок: Amatus
+2026-02-10 09:20:43 [books_toscrape] INFO:   Цена: 50.54
+2026-02-10 09:20:43 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:20:43 [books_toscrape] INFO:   Количество: 15
+2026-02-10 09:20:43 [books_toscrape] INFO:   Рейтинг: 5
+2026-02-10 09:20:43 [books_toscrape] INFO:   Категория: Default
+2026-02-10 09:20:43 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:20:43 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/amatus_787/index.html
+2026-02-10 09:20:43 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:20:43 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #200: http://books.toscrape.com/catalogue/amatus_787/ind...
+2026-02-10 09:20:43 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-13.html
+2026-02-10 09:20:43 [books_toscrape] INFO: [Книга #210] Обработка: http://books.toscrape.com/catalogue/zealot-the-life-and-times-of-jesus-of-nazareth_785/index.html
+2026-02-10 09:20:54 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.01 сек для http://books.toscrape.com/catalogue/the-wedding-pact-the-oma... (мета: генерация)
+2026-02-10 09:20:58 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #230: http://books.toscrape.com/catalogue/the-year-of-magical-thin... (ожидание: 3 сек)
+2026-02-10 09:21:05 [books_toscrape.middlewares] INFO: [Прогресс задержек] Запросов: 250, Общая задержка: 315.8 сек, Средняя: 1.26 сек
+2026-02-10 09:21:12 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #240: http://books.toscrape.com/catalogue/whole-lotta-creativity-g... (ожидание: 3 сек)
+2026-02-10 09:21:12 [books_toscrape] INFO: [Книга #220] Обработка: http://books.toscrape.com/catalogue/daring-greatly-how-the-courage-to-be-vulnerable-transforms-the-way-we-live-love-parent-and-lead_799/index.html
+2026-02-10 09:21:12 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:21:12 [books_toscrape] INFO: 📖 КНИГА #220
+2026-02-10 09:21:12 [books_toscrape] INFO:   Заголовок: Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead
+2026-02-10 09:21:12 [books_toscrape] INFO:   Цена: 19.43
+2026-02-10 09:21:12 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:21:12 [books_toscrape] INFO:   Количество: 15
+2026-02-10 09:21:12 [books_toscrape] INFO:   Рейтинг: 3
+2026-02-10 09:21:12 [books_toscrape] INFO:   Категория: Nonfiction
+2026-02-10 09:21:12 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:21:12 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/daring-greatly-how-the-courage-to-be-vulnerable-transforms-the-way-we-live-love-parent-and-lead_799/index.html
+2026-02-10 09:21:12 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:21:12 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #220: http://books.toscrape.com/catalogue/daring-greatly...
+2026-02-10 09:21:12 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-14.html
+2026-02-10 09:21:19 [books_toscrape.middlewares] INFO: ⏱️  Задержка 0.53 сек для http://books.toscrape.com/catalogue/the-bane-chronicles-the-... (мета: генерация)
+2026-02-10 09:21:22 [scrapy.extensions.logstats] INFO: Crawled 243 pages (at 42 pages/min), scraped 229 items (at 42 items/min)
+2026-02-10 09:21:24 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #250: http://books.toscrape.com/catalogue/the-guilty-will-robie-4_... (ожидание: 3 сек)
+2026-02-10 09:21:29 [books_toscrape] INFO: [Книга #230] Обработка: http://books.toscrape.com/catalogue/the-year-of-magical-thinking_770/index.html
+2026-02-10 09:21:38 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #260: http://books.toscrape.com/catalogue/the-power-of-habit-why-w... (ожидание: 3 сек)
+2026-02-10 09:21:38 [books_toscrape] INFO: [Книга #240] Обработка: http://books.toscrape.com/catalogue/whole-lotta-creativity-going-on-60-fun-and-unusual-exercises-to-awaken-and-strengthen-your-creativity_780/index.html
+2026-02-10 09:21:38 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:21:38 [books_toscrape] INFO: 📖 КНИГА #240
+2026-02-10 09:21:38 [books_toscrape] INFO:   Заголовок: Whole Lotta Creativity Going On: 60 Fun and Unusual Exercises to Awaken and Strengthen Your Creativity
+2026-02-10 09:21:38 [books_toscrape] INFO:   Цена: 38.2
+2026-02-10 09:21:38 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:21:38 [books_toscrape] INFO:   Количество: 14
+2026-02-10 09:21:38 [books_toscrape] INFO:   Рейтинг: 4
+2026-02-10 09:21:38 [books_toscrape] INFO:   Категория: Nonfiction
+2026-02-10 09:21:38 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:21:38 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/whole-lotta-creativity-going-on-60-fun-and-unusual-exercises-to-awaken-and-strengthen-your-creativity_780/index.html
+2026-02-10 09:21:38 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:21:38 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #240: http://books.toscrape.com/catalogue/whole-lotta-cr...
+2026-02-10 09:21:41 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-15.html
+2026-02-10 09:21:45 [books_toscrape.middlewares] INFO: ⏱️  Задержка 0.61 сек для http://books.toscrape.com/catalogue/overload-how-to-unplug-u... (мета: генерация)
+2026-02-10 09:21:52 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #270: http://books.toscrape.com/catalogue/robin-war_730/index.html... (ожидание: 3 сек)
+2026-02-10 09:21:55 [books_toscrape] INFO: [Книга #250] Обработка: http://books.toscrape.com/catalogue/the-guilty-will-robie-4_750/index.html
+2026-02-10 09:22:06 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #280: http://books.toscrape.com/catalogue/swell-a-year-of-waves_74... (ожидание: 3 сек)
+2026-02-10 09:22:06 [books_toscrape] INFO: [Книга #260] Обработка: http://books.toscrape.com/catalogue/the-power-of-habit-why-we-do-what-we-do-in-life-and-business_760/index.html
+2026-02-10 09:22:06 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:22:06 [books_toscrape] INFO: 📖 КНИГА #260
+2026-02-10 09:22:06 [books_toscrape] INFO:   Заголовок: The Power of Habit: Why We Do What We Do in Life and Business
+2026-02-10 09:22:06 [books_toscrape] INFO:   Цена: 16.88
+2026-02-10 09:22:06 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:22:06 [books_toscrape] INFO:   Количество: 14
+2026-02-10 09:22:06 [books_toscrape] INFO:   Рейтинг: 3
+2026-02-10 09:22:06 [books_toscrape] INFO:   Категория: Default
+2026-02-10 09:22:06 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:22:06 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/the-power-of-habit-why-we-do-what-we-do-in-life-and-business_760/index.html
+2026-02-10 09:22:06 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:22:06 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #260: http://books.toscrape.com/catalogue/the-power-of-h...
+2026-02-10 09:22:06 [books_toscrape] INFO: [Прогресс] Страниц: 15, Книг: 264, Время: 406.6 сек, Скорость: 0.65 книг/сек
+2026-02-10 09:22:06 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-16.html
+2026-02-10 09:22:11 [books_toscrape.middlewares] INFO: [Прогресс задержек] Запросов: 300, Общая задержка: 376.9 сек, Средняя: 1.26 сек
+2026-02-10 09:22:11 [books_toscrape.middlewares] INFO: ⏱️  Задержка 0.56 сек для http://books.toscrape.com/catalogue/i-know-what-im-doing-and... (мета: генерация)
+2026-02-10 09:22:20 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #290: http://books.toscrape.com/catalogue/looking-for-lovely-colle... (ожидание: 3 сек)
+2026-02-10 09:22:21 [books_toscrape] INFO: [Книга #270] Обработка: http://books.toscrape.com/catalogue/rain-fish_728/index.html
+2026-02-10 09:22:23 [scrapy.extensions.logstats] INFO: Crawled 289 pages (at 46 pages/min), scraped 272 items (at 43 items/min)
+2026-02-10 09:22:32 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #300: http://books.toscrape.com/catalogue/my-name-is-lucy-barton_7... (ожидание: 3 сек)
+2026-02-10 09:22:32 [books_toscrape] INFO: [Книга #280] Обработка: http://books.toscrape.com/catalogue/swell-a-year-of-waves_740/index.html
+2026-02-10 09:22:32 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:22:32 [books_toscrape] INFO: 📖 КНИГА #280
+2026-02-10 09:22:32 [books_toscrape] INFO:   Заголовок: Swell: A Year of Waves
+2026-02-10 09:22:32 [books_toscrape] INFO:   Цена: 45.58
+2026-02-10 09:22:32 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:22:32 [books_toscrape] INFO:   Количество: 14
+2026-02-10 09:22:32 [books_toscrape] INFO:   Рейтинг: 1
+2026-02-10 09:22:32 [books_toscrape] INFO:   Категория: Nonfiction
+2026-02-10 09:22:32 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:22:32 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/swell-a-year-of-waves_740/index.html
+2026-02-10 09:22:32 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:22:32 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #280: http://books.toscrape.com/catalogue/swell-a-year-o...
+2026-02-10 09:22:32 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-17.html
+2026-02-10 09:22:36 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.44 сек для http://books.toscrape.com/catalogue/daily-fantasy-sports_683... (мета: генерация)
+2026-02-10 09:22:46 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #310: http://books.toscrape.com/catalogue/eight-hundred-grapes_690... (ожидание: 3 сек)
+2026-02-10 09:22:47 [books_toscrape] INFO: [Книга #290] Обработка: http://books.toscrape.com/catalogue/luckiest-girl-alive_713/index.html
+2026-02-10 09:22:57 [books_toscrape] INFO: [Книга #300] Обработка: http://books.toscrape.com/catalogue/my-name-is-lucy-barton_720/index.html
+2026-02-10 09:22:57 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:22:57 [books_toscrape] INFO: 📖 КНИГА #300
+2026-02-10 09:22:57 [books_toscrape] INFO:   Заголовок: My Name Is Lucy Barton
+2026-02-10 09:22:57 [books_toscrape] INFO:   Цена: 41.56
+2026-02-10 09:22:57 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:22:57 [books_toscrape] INFO:   Количество: 14
+2026-02-10 09:22:57 [books_toscrape] INFO:   Рейтинг: 1
+2026-02-10 09:22:57 [books_toscrape] INFO:   Категория: Fiction
+2026-02-10 09:22:57 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:22:57 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/my-name-is-lucy-barton_720/index.html
+2026-02-10 09:22:57 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:22:57 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #300: http://books.toscrape.com/catalogue/my-name-is-luc...
+2026-02-10 09:22:58 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #320: http://books.toscrape.com/catalogue/hold-your-breath-search-... (ожидание: 3 сек)
+2026-02-10 09:22:59 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-18.html
+2026-02-10 09:23:01 [books_toscrape.middlewares] INFO: ⏱️  Задержка 0.55 сек для http://books.toscrape.com/catalogue/angels-walking-angels-wa... (мета: генерация)
+2026-02-10 09:23:13 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #330: http://books.toscrape.com/catalogue/buying-in-the-secret-dia... (ожидание: 3 сек)
+2026-02-10 09:23:15 [books_toscrape.middlewares] INFO: [Прогресс задержек] Запросов: 350, Общая задержка: 436.2 сек, Средняя: 1.25 сек
+2026-02-10 09:23:22 [books_toscrape] INFO: [Книга #310] Обработка: http://books.toscrape.com/catalogue/eligible-the-austen-project-4_692/index.html
+2026-02-10 09:23:22 [scrapy.extensions.logstats] INFO: Crawled 336 pages (at 47 pages/min), scraped 318 items (at 46 items/min)
+2026-02-10 09:23:26 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #340: http://books.toscrape.com/catalogue/code-name-verity-code-na... (ожидание: 3 сек)
+2026-02-10 09:23:26 [books_toscrape] INFO: [Книга #320] Обработка: http://books.toscrape.com/catalogue/hold-your-breath-search-and-rescue-1_700/index.html
+2026-02-10 09:23:26 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:23:26 [books_toscrape] INFO: 📖 КНИГА #320
+2026-02-10 09:23:26 [books_toscrape] INFO:   Заголовок: Hold Your Breath (Search and Rescue #1)
+2026-02-10 09:23:26 [books_toscrape] INFO:   Цена: 28.82
+2026-02-10 09:23:26 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:23:26 [books_toscrape] INFO:   Количество: 14
+2026-02-10 09:23:26 [books_toscrape] INFO:   Рейтинг: 1
+2026-02-10 09:23:26 [books_toscrape] INFO:   Категория: Romance
+2026-02-10 09:23:26 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:23:26 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/hold-your-breath-search-and-rescue-1_700/index.html
+2026-02-10 09:23:26 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:23:26 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #320: http://books.toscrape.com/catalogue/hold-your-brea...
+2026-02-10 09:23:26 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-19.html
+2026-02-10 09:23:27 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.84 сек для http://books.toscrape.com/catalogue/the-silent-sister-riley-... (мета: генерация)
+2026-02-10 09:23:40 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #350: http://books.toscrape.com/catalogue/1491-new-revelations-of-... (ожидание: 3 сек)
+2026-02-10 09:23:41 [books_toscrape] INFO: [Книга #330] Обработка: http://books.toscrape.com/catalogue/buying-in-the-secret-dialogue-between-what-we-buy-and-who-we-are_670/index.html
+2026-02-10 09:23:53 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #360: http://books.toscrape.com/catalogue/all-the-light-we-cannot-... (ожидание: 3 сек)
+2026-02-10 09:23:53 [books_toscrape] INFO: [Книга #340] Обработка: http://books.toscrape.com/catalogue/code-name-verity-code-name-verity-1_680/index.html
+2026-02-10 09:23:53 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:23:53 [books_toscrape] INFO: 📖 КНИГА #340
+2026-02-10 09:23:53 [books_toscrape] INFO:   Заголовок: Code Name Verity (Code Name Verity #1)
+2026-02-10 09:23:53 [books_toscrape] INFO:   Цена: 22.13
+2026-02-10 09:23:53 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:23:53 [books_toscrape] INFO:   Количество: 14
+2026-02-10 09:23:53 [books_toscrape] INFO:   Рейтинг: 4
+2026-02-10 09:23:53 [books_toscrape] INFO:   Категория: Add a comment
+2026-02-10 09:23:53 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:23:53 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/code-name-verity-code-name-verity-1_680/index.html
+2026-02-10 09:23:53 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:23:53 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #340: http://books.toscrape.com/catalogue/code-name-veri...
+2026-02-10 09:23:53 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-20.html
+2026-02-10 09:23:53 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.16 сек для http://books.toscrape.com/catalogue/page-20.html... (мета: 1.1563860619473427)
+2026-02-10 09:24:07 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #370: http://books.toscrape.com/catalogue/raspberry-pi-electronics... (ожидание: 3 сек)
+2026-02-10 09:24:08 [books_toscrape] INFO: [Книга #350] Обработка: http://books.toscrape.com/catalogue/1491-new-revelations-of-the-americas-before-columbus_650/index.html
+2026-02-10 09:24:18 [books_toscrape.middlewares] INFO: [Прогресс задержек] Запросов: 400, Общая задержка: 496.0 сек, Средняя: 1.24 сек
+2026-02-10 09:24:18 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.30 сек для http://books.toscrape.com/catalogue/the-midnight-watch-a-nov... (мета: генерация)
+2026-02-10 09:24:19 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #380: http://books.toscrape.com/catalogue/the-midnight-watch-a-nov... (ожидание: 3 сек)
+2026-02-10 09:24:19 [books_toscrape] INFO: [Книга #360] Обработка: http://books.toscrape.com/catalogue/all-the-light-we-cannot-see_660/index.html
+2026-02-10 09:24:19 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:24:19 [books_toscrape] INFO: 📖 КНИГА #360
+2026-02-10 09:24:19 [books_toscrape] INFO:   Заголовок: All the Light We Cannot See
+2026-02-10 09:24:19 [books_toscrape] INFO:   Цена: 29.87
+2026-02-10 09:24:19 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:24:19 [books_toscrape] INFO:   Количество: 14
+2026-02-10 09:24:19 [books_toscrape] INFO:   Рейтинг: 5
+2026-02-10 09:24:19 [books_toscrape] INFO:   Категория: Historical
+2026-02-10 09:24:19 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:24:19 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/all-the-light-we-cannot-see_660/index.html
+2026-02-10 09:24:19 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:24:19 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #360: http://books.toscrape.com/catalogue/all-the-light-...
+2026-02-10 09:24:19 [books_toscrape] INFO: [Прогресс] Страниц: 20, Книг: 361, Время: 539.7 сек, Скорость: 0.67 книг/сек
+2026-02-10 09:24:19 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-21.html
+2026-02-10 09:24:23 [scrapy.extensions.logstats] INFO: Crawled 386 pages (at 50 pages/min), scraped 363 items (at 45 items/min)
+2026-02-10 09:24:34 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #390: http://books.toscrape.com/catalogue/troublemaker-surviving-h... (ожидание: 3 сек)
+2026-02-10 09:24:34 [books_toscrape] INFO: [Книга #370] Обработка: http://books.toscrape.com/catalogue/one-with-you-crossfire-5_626/index.html
+2026-02-10 09:24:47 [books_toscrape.middlewares] INFO: ⏱️  Задержка 0.58 сек для http://books.toscrape.com/catalogue/furiously-happy-a-funny-... (мета: генерация)
+2026-02-10 09:24:49 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #400: http://books.toscrape.com/catalogue/hide-away-eve-duncan-20_... (ожидание: 3 сек)
+2026-02-10 09:24:49 [books_toscrape] INFO: [Книга #380] Обработка: http://books.toscrape.com/catalogue/setting-the-world-on-fire-the-brief-astonishing-life-of-st-catherine-of-siena_603/index.html
+2026-02-10 09:24:49 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:24:49 [books_toscrape] INFO: 📖 КНИГА #380
+2026-02-10 09:24:49 [books_toscrape] INFO:   Заголовок: Setting the World on Fire: The Brief, Astonishing Life of St. Catherine of Siena
+2026-02-10 09:24:49 [books_toscrape] INFO:   Цена: 21.15
+2026-02-10 09:24:49 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:24:49 [books_toscrape] INFO:   Количество: 11
+2026-02-10 09:24:49 [books_toscrape] INFO:   Рейтинг: 2
+2026-02-10 09:24:49 [books_toscrape] INFO:   Категория: Biography
+2026-02-10 09:24:49 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:24:49 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/setting-the-world-on-fire-the-brief-astonishing-life-of-st-catherine-of-siena_603/index.html
+2026-02-10 09:24:49 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:24:49 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #380: http://books.toscrape.com/catalogue/setting-the-wo...
+2026-02-10 09:24:49 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-22.html
+2026-02-10 09:24:59 [books_toscrape] INFO: [Книга #390] Обработка: http://books.toscrape.com/catalogue/the-gray-rhino-how-to-recognize-and-act-on-the-obvious-dangers-we-ignore_638/index.html
+2026-02-10 09:25:00 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #410: http://books.toscrape.com/catalogue/daredevils_590/index.htm... (ожидание: 3 сек)
+2026-02-10 09:25:10 [books_toscrape.middlewares] INFO: ⏱️  Задержка 0.52 сек для http://books.toscrape.com/catalogue/m-train_598/index.html... (мета: генерация)
+2026-02-10 09:25:12 [books_toscrape] INFO: [Книга #400] Обработка: http://books.toscrape.com/catalogue/hide-away-eve-duncan-20_620/index.html
+2026-02-10 09:25:12 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:25:12 [books_toscrape] INFO: 📖 КНИГА #400
+2026-02-10 09:25:12 [books_toscrape] INFO:   Заголовок: Hide Away (Eve Duncan #20)
+2026-02-10 09:25:12 [books_toscrape] INFO:   Цена: 11.84
+2026-02-10 09:25:12 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:25:12 [books_toscrape] INFO:   Количество: 12
+2026-02-10 09:25:12 [books_toscrape] INFO:   Рейтинг: 1
+2026-02-10 09:25:12 [books_toscrape] INFO:   Категория: Mystery
+2026-02-10 09:25:12 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:25:12 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/hide-away-eve-duncan-20_620/index.html
+2026-02-10 09:25:12 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:25:12 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #400: http://books.toscrape.com/catalogue/hide-away-eve-...
+2026-02-10 09:25:14 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #420: http://books.toscrape.com/catalogue/mothering-sunday_600/ind... (ожидание: 3 сек)
+2026-02-10 09:25:14 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-23.html
+2026-02-10 09:25:14 [books_toscrape] INFO: [Книга #410] Обработка: http://books.toscrape.com/catalogue/born-for-this-how-to-find-the-work-you-were-meant-to-do_588/index.html
+2026-02-10 09:25:23 [books_toscrape.middlewares] INFO: [Прогресс задержек] Запросов: 450, Общая задержка: 554.6 сек, Средняя: 1.23 сек
+2026-02-10 09:25:28 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #430: http://books.toscrape.com/catalogue/the-art-and-science-of-l... (ожидание: 3 сек)
+2026-02-10 09:25:28 [scrapy.extensions.logstats] INFO: Crawled 436 pages (at 50 pages/min), scraped 411 items (at 48 items/min)
+2026-02-10 09:25:37 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.43 сек для http://books.toscrape.com/catalogue/underlying-notes_577/ind... (мета: генерация)
+2026-02-10 09:25:43 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #440: http://books.toscrape.com/catalogue/without-shame_580/index.... (ожидание: 3 сек)
+2026-02-10 09:25:43 [books_toscrape] INFO: [Книга #420] Обработка: http://books.toscrape.com/catalogue/mothering-sunday_600/index.html
+2026-02-10 09:25:43 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:25:43 [books_toscrape] INFO: 📖 КНИГА #420
+2026-02-10 09:25:43 [books_toscrape] INFO:   Заголовок: Mothering Sunday
+2026-02-10 09:25:43 [books_toscrape] INFO:   Цена: 13.34
+2026-02-10 09:25:43 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:25:43 [books_toscrape] INFO:   Количество: 11
+2026-02-10 09:25:43 [books_toscrape] INFO:   Рейтинг: 2
+2026-02-10 09:25:43 [books_toscrape] INFO:   Категория: Fiction
+2026-02-10 09:25:43 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:25:43 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/mothering-sunday_600/index.html
+2026-02-10 09:25:43 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:25:43 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #420: http://books.toscrape.com/catalogue/mothering-sund...
+2026-02-10 09:25:43 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-24.html
+2026-02-10 09:25:58 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #450: http://books.toscrape.com/catalogue/the-new-drawing-on-the-r... (ожидание: 3 сек)
+2026-02-10 09:26:01 [books_toscrape] INFO: [Книга #430] Обработка: http://books.toscrape.com/catalogue/the-art-and-science-of-low-carbohydrate-living_570/index.html
+2026-02-10 09:26:05 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.75 сек для http://books.toscrape.com/catalogue/23-degrees-south-a-tropi... (мета: генерация)
+2026-02-10 09:26:10 [books_toscrape] INFO: [Книга #440] Обработка: http://books.toscrape.com/catalogue/watchmen_579/index.html
+2026-02-10 09:26:10 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:26:10 [books_toscrape] INFO: 📖 КНИГА #440
+2026-02-10 09:26:10 [books_toscrape] INFO:   Заголовок: Watchmen
+2026-02-10 09:26:10 [books_toscrape] INFO:   Цена: 58.05
+2026-02-10 09:26:10 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:26:10 [books_toscrape] INFO:   Количество: 9
+2026-02-10 09:26:10 [books_toscrape] INFO:   Рейтинг: 4
+2026-02-10 09:26:10 [books_toscrape] INFO:   Категория: Add a comment
+2026-02-10 09:26:10 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:26:10 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/watchmen_579/index.html
+2026-02-10 09:26:10 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:26:10 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #440: http://books.toscrape.com/catalogue/watchmen_579/i...
+2026-02-10 09:26:12 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #460: http://books.toscrape.com/catalogue/chernobyl-012340-the-inc... (ожидание: 3 сек)
+2026-02-10 09:26:16 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-25.html
+2026-02-10 09:26:23 [scrapy.extensions.logstats] INFO: Crawled 474 pages (at 38 pages/min), scraped 446 items (at 35 items/min)
+2026-02-10 09:26:28 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #470: http://books.toscrape.com/catalogue/kill-em-and-leave-search... (ожидание: 3 сек)
+2026-02-10 09:26:29 [books_toscrape] INFO: [Книга #450] Обработка: http://books.toscrape.com/catalogue/the-new-drawing-on-the-right-side-of-the-brain_550/index.html
+2026-02-10 09:26:35 [books_toscrape.middlewares] INFO: [Прогресс задержек] Запросов: 500, Общая задержка: 621.9 сек, Средняя: 1.24 сек
+2026-02-10 09:26:35 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.23 сек для http://books.toscrape.com/catalogue/my-life-next-door-my-lif... (мета: генерация)
+2026-02-10 09:26:43 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #480: http://books.toscrape.com/catalogue/roller-girl_540/index.ht... (ожидание: 3 сек)
+2026-02-10 09:26:43 [books_toscrape] INFO: [Прогресс] Страниц: 25, Книг: 459, Время: 683.4 сек, Скорость: 0.67 книг/сек
+2026-02-10 09:26:43 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-26.html
+2026-02-10 09:26:43 [books_toscrape] INFO: [Книга #460] Обработка: http://books.toscrape.com/catalogue/chernobyl-012340-the-incredible-true-story-of-the-worlds-worst-nuclear-disaster_560/index.html
+2026-02-10 09:26:43 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:26:43 [books_toscrape] INFO: 📖 КНИГА #460
+2026-02-10 09:26:43 [books_toscrape] INFO:   Заголовок: Chernobyl 01:23:40: The Incredible True Story of the World's Worst Nuclear Disaster
+2026-02-10 09:26:43 [books_toscrape] INFO:   Цена: 35.92
+2026-02-10 09:26:43 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:26:43 [books_toscrape] INFO:   Количество: 9
+2026-02-10 09:26:43 [books_toscrape] INFO:   Рейтинг: 2
+2026-02-10 09:26:43 [books_toscrape] INFO:   Категория: Nonfiction
+2026-02-10 09:26:43 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:26:43 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/chernobyl-012340-the-incredible-true-story-of-the-worlds-worst-nuclear-disaster_560/index.html
+2026-02-10 09:26:43 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:26:43 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #460: http://books.toscrape.com/catalogue/chernobyl-0123...
+2026-02-10 09:26:58 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #490: http://books.toscrape.com/catalogue/32-yolks_510/index.html... (ожидание: 3 сек)
+2026-02-10 09:26:58 [books_toscrape] INFO: [Книга #470] Обработка: http://books.toscrape.com/catalogue/kill-em-and-leave-searching-for-james-brown-and-the-american-soul_528/index.html
+2026-02-10 09:27:02 [books_toscrape.middlewares] INFO: ⏱️  Задержка 0.77 сек для http://books.toscrape.com/catalogue/brazen-the-courage-to-fi... (мета: генерация)
+2026-02-10 09:27:10 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #500: http://books.toscrape.com/catalogue/heaven-is-for-real-a-lit... (ожидание: 3 сек)
+2026-02-10 09:27:10 [books_toscrape] INFO: [Книга #480] Обработка: http://books.toscrape.com/catalogue/roller-girl_540/index.html
+2026-02-10 09:27:10 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:27:10 [books_toscrape] INFO: 📖 КНИГА #480
+2026-02-10 09:27:10 [books_toscrape] INFO:   Заголовок: Roller Girl
+2026-02-10 09:27:10 [books_toscrape] INFO:   Цена: 14.1
+2026-02-10 09:27:10 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:27:10 [books_toscrape] INFO:   Количество: 8
+2026-02-10 09:27:10 [books_toscrape] INFO:   Рейтинг: 5
+2026-02-10 09:27:10 [books_toscrape] INFO:   Категория: Sequential Art
+2026-02-10 09:27:10 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:27:10 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/roller-girl_540/index.html
+2026-02-10 09:27:10 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:27:10 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #480: http://books.toscrape.com/catalogue/roller-girl_54...
+2026-02-10 09:27:10 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-27.html
+2026-02-10 09:27:23 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #510: http://books.toscrape.com/catalogue/the-art-book_490/index.h... (ожидание: 3 сек)
+2026-02-10 09:27:23 [scrapy.extensions.logstats] INFO: Crawled 518 pages (at 44 pages/min), scraped 485 items (at 39 items/min)
+2026-02-10 09:27:23 [books_toscrape] INFO: [Книга #490] Обработка: http://books.toscrape.com/catalogue/32-yolks_510/index.html
+2026-02-10 09:27:26 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.75 сек для http://books.toscrape.com/catalogue/the-constant-princess-th... (мета: генерация)
+2026-02-10 09:27:39 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #520: http://books.toscrape.com/catalogue/the-story-of-art_500/ind... (ожидание: 3 сек)
+2026-02-10 09:27:39 [books_toscrape] INFO: [Книга #500] Обработка: http://books.toscrape.com/catalogue/death-by-leisure-a-cautionary-tale_516/index.html
+2026-02-10 09:27:39 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:27:39 [books_toscrape] INFO: 📖 КНИГА #500
+2026-02-10 09:27:39 [books_toscrape] INFO:   Заголовок: Death by Leisure: A Cautionary Tale
+2026-02-10 09:27:39 [books_toscrape] INFO:   Цена: 37.51
+2026-02-10 09:27:39 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:27:39 [books_toscrape] INFO:   Количество: 8
+2026-02-10 09:27:39 [books_toscrape] INFO:   Рейтинг: 4
+2026-02-10 09:27:39 [books_toscrape] INFO:   Категория: Default
+2026-02-10 09:27:39 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:27:39 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/death-by-leisure-a-cautionary-tale_516/index.html
+2026-02-10 09:27:39 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:27:39 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #500: http://books.toscrape.com/catalogue/death-by-leisu...
+2026-02-10 09:27:39 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-28.html
+2026-02-10 09:27:42 [books_toscrape.middlewares] INFO: [Прогресс задержек] Запросов: 550, Общая задержка: 684.0 сек, Средняя: 1.24 сек
+2026-02-10 09:27:54 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #530: http://books.toscrape.com/catalogue/how-to-be-a-domestic-god... (ожидание: 3 сек)
+2026-02-10 09:27:54 [books_toscrape] INFO: [Книга #510] Обработка: http://books.toscrape.com/catalogue/the-bachelor-girls-guide-to-murder-herringford-and-watts-mysteries-1_491/index.html
+2026-02-10 09:27:55 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.80 сек для http://books.toscrape.com/catalogue/john-adams_472/index.htm... (мета: генерация)
+2026-02-10 09:28:08 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #540: http://books.toscrape.com/catalogue/nightstruck-a-novel_480/... (ожидание: 3 сек)
+2026-02-10 09:28:08 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-29.html
+2026-02-10 09:28:08 [books_toscrape] INFO: [Книга #520] Обработка: http://books.toscrape.com/catalogue/the-story-of-art_500/index.html
+2026-02-10 09:28:08 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:28:08 [books_toscrape] INFO: 📖 КНИГА #520
+2026-02-10 09:28:08 [books_toscrape] INFO:   Заголовок: The Story of Art
+2026-02-10 09:28:08 [books_toscrape] INFO:   Цена: 41.14
+2026-02-10 09:28:08 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:28:08 [books_toscrape] INFO:   Количество: 7
+2026-02-10 09:28:08 [books_toscrape] INFO:   Рейтинг: 4
+2026-02-10 09:28:08 [books_toscrape] INFO:   Категория: Art
+2026-02-10 09:28:08 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:28:08 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/the-story-of-art_500/index.html
+2026-02-10 09:28:08 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:28:08 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #520: http://books.toscrape.com/catalogue/the-story-of-a...
+2026-02-10 09:28:23 [scrapy.extensions.logstats] INFO: Crawled 559 pages (at 41 pages/min), scraped 527 items (at 42 items/min)
+2026-02-10 09:28:23 [books_toscrape] INFO: [Книга #530] Обработка: http://books.toscrape.com/catalogue/how-to-be-a-domestic-goddess-baking-and-the-art-of-comfort-cooking_470/index.html
+2026-02-10 09:28:24 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #550: http://books.toscrape.com/catalogue/the-makings-of-a-fatherl... (ожидание: 3 сек)
+2026-02-10 09:28:24 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.06 сек для http://books.toscrape.com/catalogue/the-man-who-mistook-his-... (мета: генерация)
+2026-02-10 09:28:34 [books_toscrape] INFO: [Книга #540] Обработка: http://books.toscrape.com/catalogue/naturally-lean-125-nourishing-gluten-free-plant-based-recipes-all-under-300-calories_479/index.html
+2026-02-10 09:28:34 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:28:34 [books_toscrape] INFO: 📖 КНИГА #540
+2026-02-10 09:28:34 [books_toscrape] INFO:   Заголовок: Naturally Lean: 125 Nourishing Gluten-Free, Plant-Based Recipes--All Under 300 Calories
+2026-02-10 09:28:34 [books_toscrape] INFO:   Цена: 11.38
+2026-02-10 09:28:34 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:28:34 [books_toscrape] INFO:   Количество: 7
+2026-02-10 09:28:34 [books_toscrape] INFO:   Рейтинг: 5
+2026-02-10 09:28:34 [books_toscrape] INFO:   Категория: Food and Drink
+2026-02-10 09:28:34 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:28:34 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/naturally-lean-125-nourishing-gluten-free-plant-based-recipes-all-under-300-calories_479/index.html
+2026-02-10 09:28:34 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:28:34 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #540: http://books.toscrape.com/catalogue/naturally-lean...
+2026-02-10 09:28:37 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #560: http://books.toscrape.com/catalogue/benjamin-franklin-an-ame... (ожидание: 3 сек)
+2026-02-10 09:28:37 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-30.html
+2026-02-10 09:28:50 [books_toscrape.middlewares] INFO: [Прогресс задержек] Запросов: 600, Общая задержка: 747.7 сек, Средняя: 1.25 сек
+2026-02-10 09:28:50 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.24 сек для http://books.toscrape.com/catalogue/give-it-back_430/index.h... (мета: генерация)
+2026-02-10 09:28:51 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #570: http://books.toscrape.com/catalogue/give-it-back_430/index.h... (ожидание: 3 сек)
+2026-02-10 09:28:52 [books_toscrape] INFO: [Книга #550] Обработка: http://books.toscrape.com/catalogue/the-great-railway-bazaar_446/index.html
+2026-02-10 09:29:03 [books_toscrape] INFO: [Книга #560] Обработка: http://books.toscrape.com/catalogue/benjamin-franklin-an-american-life_460/index.html
+2026-02-10 09:29:03 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:29:03 [books_toscrape] INFO: 📖 КНИГА #560
+2026-02-10 09:29:03 [books_toscrape] INFO:   Заголовок: Benjamin Franklin: An American Life
+2026-02-10 09:29:03 [books_toscrape] INFO:   Цена: 48.19
+2026-02-10 09:29:03 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:29:03 [books_toscrape] INFO:   Количество: 7
+2026-02-10 09:29:03 [books_toscrape] INFO:   Рейтинг: 3
+2026-02-10 09:29:03 [books_toscrape] INFO:   Категория: Biography
+2026-02-10 09:29:03 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:29:03 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/benjamin-franklin-an-american-life_460/index.html
+2026-02-10 09:29:03 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:29:03 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #560: http://books.toscrape.com/catalogue/benjamin-frank...
+2026-02-10 09:29:05 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #580: http://books.toscrape.com/catalogue/the-barefoot-contessa-co... (ожидание: 3 сек)
+2026-02-10 09:29:05 [books_toscrape] INFO: [Прогресс] Страниц: 30, Книг: 561, Время: 825.2 сек, Скорость: 0.68 книг/сек
+2026-02-10 09:29:05 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-31.html
+2026-02-10 09:29:16 [books_toscrape.middlewares] INFO: ⏱️  Задержка 0.93 сек для http://books.toscrape.com/catalogue/the-metamorphosis_409/in... (мета: генерация)
+2026-02-10 09:29:17 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #590: http://books.toscrape.com/catalogue/the-power-greens-cookboo... (ожидание: 3 сек)
+2026-02-10 09:29:19 [books_toscrape] INFO: [Книга #570] Обработка: http://books.toscrape.com/catalogue/in-cold-blood_432/index.html
+2026-02-10 09:29:25 [scrapy.extensions.logstats] INFO: Crawled 607 pages (at 48 pages/min), scraped 573 items (at 46 items/min)
+2026-02-10 09:29:32 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #600: http://books.toscrape.com/catalogue/world-without-end-the-pi... (ожидание: 3 сек)
+2026-02-10 09:29:32 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-32.html
+2026-02-10 09:29:32 [books_toscrape] INFO: [Книга #580] Обработка: http://books.toscrape.com/catalogue/the-barefoot-contessa-cookbook_440/index.html
+2026-02-10 09:29:32 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:29:32 [books_toscrape] INFO: 📖 КНИГА #580
+2026-02-10 09:29:32 [books_toscrape] INFO:   Заголовок: The Barefoot Contessa Cookbook
+2026-02-10 09:29:32 [books_toscrape] INFO:   Цена: 59.92
+2026-02-10 09:29:32 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:29:32 [books_toscrape] INFO:   Количество: 6
+2026-02-10 09:29:32 [books_toscrape] INFO:   Рейтинг: 5
+2026-02-10 09:29:32 [books_toscrape] INFO:   Категория: Food and Drink
+2026-02-10 09:29:32 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:29:32 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/the-barefoot-contessa-cookbook_440/index.html
+2026-02-10 09:29:32 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:29:32 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #580: http://books.toscrape.com/catalogue/the-barefoot-c...
+2026-02-10 09:29:44 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.73 сек для http://books.toscrape.com/catalogue/my-mother-was-nuts_388/i... (мета: генерация)
+2026-02-10 09:29:47 [books_toscrape] INFO: [Книга #590] Обработка: http://books.toscrape.com/catalogue/the-power-greens-cookbook-140-delicious-superfood-recipes_410/index.html
+2026-02-10 09:29:49 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #610: http://books.toscrape.com/catalogue/red-dragon-hannibal-lect... (ожидание: 3 сек)
+2026-02-10 09:29:58 [books_toscrape.middlewares] INFO: [Прогресс задержек] Запросов: 650, Общая задержка: 811.4 сек, Средняя: 1.25 сек
+2026-02-10 09:30:01 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #620: http://books.toscrape.com/catalogue/the-dream-thieves-the-ra... (ожидание: 3 сек)
+2026-02-10 09:30:01 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-33.html
+2026-02-10 09:30:01 [books_toscrape] INFO: [Книга #600] Обработка: http://books.toscrape.com/catalogue/what-if-serious-scientific-answers-to-absurd-hypothetical-questions_416/index.html
+2026-02-10 09:30:01 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:30:01 [books_toscrape] INFO: 📖 КНИГА #600
+2026-02-10 09:30:01 [books_toscrape] INFO:   Заголовок: What If?: Serious Scientific Answers to Absurd Hypothetical Questions
+2026-02-10 09:30:01 [books_toscrape] INFO:   Цена: 53.68
+2026-02-10 09:30:01 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:30:01 [books_toscrape] INFO:   Количество: 5
+2026-02-10 09:30:01 [books_toscrape] INFO:   Рейтинг: 4
+2026-02-10 09:30:01 [books_toscrape] INFO:   Категория: Default
+2026-02-10 09:30:01 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:30:01 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/what-if-serious-scientific-answers-to-absurd-hypothetical-questions_416/index.html
+2026-02-10 09:30:01 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:30:01 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #600: http://books.toscrape.com/catalogue/what-if-seriou...
+2026-02-10 09:30:13 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.57 сек для http://books.toscrape.com/catalogue/data-a-love-story-how-i-... (мета: генерация)
+2026-02-10 09:30:16 [books_toscrape] INFO: [Книга #610] Обработка: http://books.toscrape.com/catalogue/red-dragon-hannibal-lecter-1_390/index.html
+2026-02-10 09:30:17 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #630: http://books.toscrape.com/catalogue/dracula-the-un-dead_370/... (ожидание: 3 сек)
+2026-02-10 09:30:27 [scrapy.extensions.logstats] INFO: Crawled 653 pages (at 46 pages/min), scraped 615 items (at 42 items/min)
+2026-02-10 09:30:29 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #640: http://books.toscrape.com/catalogue/isla-and-the-happily-eve... (ожидание: 3 сек)
+2026-02-10 09:30:29 [books_toscrape] INFO: [Книга #620] Обработка: http://books.toscrape.com/catalogue/the-dream-thieves-the-raven-cycle-2_400/index.html
+2026-02-10 09:30:29 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:30:29 [books_toscrape] INFO: 📖 КНИГА #620
+2026-02-10 09:30:29 [books_toscrape] INFO:   Заголовок: The Dream Thieves (The Raven Cycle #2)
+2026-02-10 09:30:29 [books_toscrape] INFO:   Цена: 34.5
+2026-02-10 09:30:29 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:30:29 [books_toscrape] INFO:   Количество: 5
+2026-02-10 09:30:29 [books_toscrape] INFO:   Рейтинг: 1
+2026-02-10 09:30:29 [books_toscrape] INFO:   Категория: Default
+2026-02-10 09:30:29 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:30:29 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/the-dream-thieves-the-raven-cycle-2_400/index.html
+2026-02-10 09:30:29 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:30:29 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #620: http://books.toscrape.com/catalogue/the-dream-thie...
+2026-02-10 09:30:29 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-34.html
+2026-02-10 09:30:39 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.45 сек для http://books.toscrape.com/catalogue/the-geography-of-bliss-o... (мета: генерация)
+2026-02-10 09:30:45 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #650: http://books.toscrape.com/catalogue/the-jazz-of-physics-the-... (ожидание: 3 сек)
+2026-02-10 09:30:55 [books_toscrape] INFO: [Книга #630] Обработка: http://books.toscrape.com/catalogue/fool-me-once_374/index.html
+2026-02-10 09:30:58 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #660: http://books.toscrape.com/catalogue/alight-the-generations-t... (ожидание: 3 сек)
+2026-02-10 09:30:58 [books_toscrape] INFO: [Книга #640] Обработка: http://books.toscrape.com/catalogue/isla-and-the-happily-ever-after-anna-and-the-french-kiss-3_380/index.html
+2026-02-10 09:30:58 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:30:58 [books_toscrape] INFO: 📖 КНИГА #640
+2026-02-10 09:30:58 [books_toscrape] INFO:   Заголовок: Isla and the Happily Ever After (Anna and the French Kiss #3)
+2026-02-10 09:30:58 [books_toscrape] INFO:   Цена: 48.13
+2026-02-10 09:30:58 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:30:58 [books_toscrape] INFO:   Количество: 5
+2026-02-10 09:30:58 [books_toscrape] INFO:   Рейтинг: 5
+2026-02-10 09:30:58 [books_toscrape] INFO:   Категория: Young Adult
+2026-02-10 09:30:58 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:30:58 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/isla-and-the-happily-ever-after-anna-and-the-french-kiss-3_380/index.html
+2026-02-10 09:30:58 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:30:59 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #640: http://books.toscrape.com/catalogue/isla-and-the-h...
+2026-02-10 09:30:59 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-35.html
+2026-02-10 09:31:06 [books_toscrape.middlewares] INFO: [Прогресс задержек] Запросов: 700, Общая задержка: 874.8 сек, Средняя: 1.25 сек
+2026-02-10 09:31:06 [books_toscrape.middlewares] INFO: ⏱️  Задержка 0.83 сек для http://books.toscrape.com/catalogue/harry-potter-and-the-cha... (мета: генерация)
+2026-02-10 09:31:10 [books_toscrape] INFO: [Книга #650] Обработка: http://books.toscrape.com/catalogue/the-jazz-of-physics-the-secret-link-between-music-and-the-structure-of-the-universe_350/index.html
+2026-02-10 09:31:12 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #670: http://books.toscrape.com/catalogue/it_330/index.html... (ожидание: 3 сек)
+2026-02-10 09:31:23 [scrapy.extensions.logstats] INFO: Crawled 694 pages (at 41 pages/min), scraped 656 items (at 41 items/min)
+2026-02-10 09:31:25 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #680: http://books.toscrape.com/catalogue/shopaholic-ties-the-knot... (ожидание: 3 сек)
+2026-02-10 09:31:25 [books_toscrape] INFO: [Книга #660] Обработка: http://books.toscrape.com/catalogue/alight-the-generations-trilogy-2_360/index.html
+2026-02-10 09:31:25 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:31:25 [books_toscrape] INFO: 📖 КНИГА #660
+2026-02-10 09:31:25 [books_toscrape] INFO:   Заголовок: Alight (The Generations Trilogy #2)
+2026-02-10 09:31:25 [books_toscrape] INFO:   Цена: 58.59
+2026-02-10 09:31:25 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:31:25 [books_toscrape] INFO:   Количество: 5
+2026-02-10 09:31:25 [books_toscrape] INFO:   Рейтинг: 4
+2026-02-10 09:31:25 [books_toscrape] INFO:   Категория: Default
+2026-02-10 09:31:25 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:31:25 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/alight-the-generations-trilogy-2_360/index.html
+2026-02-10 09:31:25 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:31:25 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #660: http://books.toscrape.com/catalogue/alight-the-gen...
+2026-02-10 09:31:25 [books_toscrape] INFO: [Прогресс] Страниц: 35, Книг: 661, Время: 965.7 сек, Скорость: 0.68 книг/сек
+2026-02-10 09:31:25 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-36.html
+2026-02-10 09:31:32 [books_toscrape.middlewares] INFO: ⏱️  Задержка 0.72 сек для http://books.toscrape.com/catalogue/whered-you-go-bernadette... (мета: генерация)
+2026-02-10 09:31:38 [books_toscrape] INFO: [Книга #670] Обработка: http://books.toscrape.com/catalogue/it_330/index.html
+2026-02-10 09:31:40 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #690: http://books.toscrape.com/catalogue/a-history-of-god-the-400... (ожидание: 3 сек)
+2026-02-10 09:31:53 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #700: http://books.toscrape.com/catalogue/far-from-true-promise-fa... (ожидание: 3 сек)
+2026-02-10 09:31:53 [books_toscrape] INFO: [Книга #680] Обработка: http://books.toscrape.com/catalogue/we-are-all-completely-beside-ourselves_301/index.html
+2026-02-10 09:31:53 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:31:53 [books_toscrape] INFO: 📖 КНИГА #680
+2026-02-10 09:31:53 [books_toscrape] INFO:   Заголовок: We Are All Completely Beside Ourselves
+2026-02-10 09:31:53 [books_toscrape] INFO:   Цена: 24.04
+2026-02-10 09:31:53 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:31:53 [books_toscrape] INFO:   Количество: 3
+2026-02-10 09:31:53 [books_toscrape] INFO:   Рейтинг: 1
+2026-02-10 09:31:53 [books_toscrape] INFO:   Категория: Contemporary
+2026-02-10 09:31:53 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:31:53 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/we-are-all-completely-beside-ourselves_301/index.html
+2026-02-10 09:31:53 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:31:53 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #680: http://books.toscrape.com/catalogue/we-are-all-com...
+2026-02-10 09:31:53 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-37.html
+2026-02-10 09:31:58 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.42 сек для http://books.toscrape.com/catalogue/the-thing-about-jellyfis... (мета: генерация)
+2026-02-10 09:32:09 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #710: http://books.toscrape.com/catalogue/three-martini-lunch_290/... (ожидание: 3 сек)
+2026-02-10 09:32:12 [books_toscrape.middlewares] INFO: [Прогресс задержек] Запросов: 750, Общая задержка: 937.3 сек, Средняя: 1.25 сек
+2026-02-10 09:32:12 [books_toscrape] INFO: [Книга #690] Обработка: http://books.toscrape.com/catalogue/a-history-of-god-the-4000-year-quest-of-judaism-christianity-and-islam_310/index.html
+2026-02-10 09:32:21 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #720: http://books.toscrape.com/catalogue/walk-the-edge-thunder-ro... (ожидание: 3 сек)
+2026-02-10 09:32:21 [books_toscrape] INFO: [Книга #700] Обработка: http://books.toscrape.com/catalogue/far-from-true-promise-falls-trilogy-2_320/index.html
+2026-02-10 09:32:21 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:32:21 [books_toscrape] INFO: 📖 КНИГА #700
+2026-02-10 09:32:21 [books_toscrape] INFO:   Заголовок: Far From True (Promise Falls Trilogy #2)
+2026-02-10 09:32:21 [books_toscrape] INFO:   Цена: 34.93
+2026-02-10 09:32:21 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:32:21 [books_toscrape] INFO:   Количество: 4
+2026-02-10 09:32:21 [books_toscrape] INFO:   Рейтинг: 2
+2026-02-10 09:32:21 [books_toscrape] INFO:   Категория: Thriller
+2026-02-10 09:32:21 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:32:21 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/far-from-true-promise-falls-trilogy-2_320/index.html
+2026-02-10 09:32:21 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:32:21 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #700: http://books.toscrape.com/catalogue/far-from-true-...
+2026-02-10 09:32:21 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-38.html
+2026-02-10 09:32:23 [books_toscrape.middlewares] INFO: ⏱️  Задержка 0.81 сек для http://books.toscrape.com/catalogue/the-lovers-dictionary_26... (мета: генерация)
+2026-02-10 09:32:24 [scrapy.extensions.logstats] INFO: Crawled 741 pages (at 47 pages/min), scraped 701 items (at 45 items/min)
+2026-02-10 09:32:35 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #730: http://books.toscrape.com/catalogue/the-picture-of-dorian-gr... (ожидание: 3 сек)
+2026-02-10 09:32:37 [books_toscrape] INFO: [Книга #710] Обработка: http://books.toscrape.com/catalogue/three-martini-lunch_290/index.html
+2026-02-10 09:32:52 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #740: http://books.toscrape.com/catalogue/the-silkworm-cormoran-st... (ожидание: 3 сек)
+2026-02-10 09:32:52 [books_toscrape] INFO: [Книга #720] Обработка: http://books.toscrape.com/catalogue/walk-the-edge-thunder-road-2_300/index.html
+2026-02-10 09:32:52 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:32:52 [books_toscrape] INFO: 📖 КНИГА #720
+2026-02-10 09:32:52 [books_toscrape] INFO:   Заголовок: Walk the Edge (Thunder Road #2)
+2026-02-10 09:32:52 [books_toscrape] INFO:   Цена: 32.36
+2026-02-10 09:32:52 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:32:52 [books_toscrape] INFO:   Количество: 3
+2026-02-10 09:32:52 [books_toscrape] INFO:   Рейтинг: 3
+2026-02-10 09:32:52 [books_toscrape] INFO:   Категория: Young Adult
+2026-02-10 09:32:52 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:32:52 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/walk-the-edge-thunder-road-2_300/index.html
+2026-02-10 09:32:52 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:32:52 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #720: http://books.toscrape.com/catalogue/walk-the-edge-...
+2026-02-10 09:32:52 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-39.html
+2026-02-10 09:32:52 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.22 сек для http://books.toscrape.com/catalogue/the-day-the-crayons-came... (мета: генерация)
+2026-02-10 09:33:05 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #750: http://books.toscrape.com/catalogue/the-girl-with-all-the-gi... (ожидание: 3 сек)
+2026-02-10 09:33:08 [books_toscrape] INFO: [Книга #730] Обработка: http://books.toscrape.com/catalogue/the-purest-hook-second-circle-tattoos-3_271/index.html
+2026-02-10 09:33:20 [books_toscrape.middlewares] INFO: [Прогресс задержек] Запросов: 800, Общая задержка: 1000.6 сек, Средняя: 1.25 сек
+2026-02-10 09:33:20 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #760: http://books.toscrape.com/catalogue/the-lean-startup-how-tod... (ожидание: 3 сек)
+2026-02-10 09:33:20 [books_toscrape] INFO: [Книга #740] Обработка: http://books.toscrape.com/catalogue/the-sandman-vol-3-dream-country-the-sandman-volumes-3_279/index.html
+2026-02-10 09:33:20 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:33:20 [books_toscrape] INFO: 📖 КНИГА #740
+2026-02-10 09:33:20 [books_toscrape] INFO:   Заголовок: The Sandman, Vol. 3: Dream Country (The Sandman (volumes) #3)
+2026-02-10 09:33:20 [books_toscrape] INFO:   Цена: 55.55
+2026-02-10 09:33:20 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:33:20 [books_toscrape] INFO:   Количество: 3
+2026-02-10 09:33:20 [books_toscrape] INFO:   Рейтинг: 5
+2026-02-10 09:33:20 [books_toscrape] INFO:   Категория: Sequential Art
+2026-02-10 09:33:20 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:33:20 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/the-sandman-vol-3-dream-country-the-sandman-volumes-3_279/index.html
+2026-02-10 09:33:20 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:33:20 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #740: http://books.toscrape.com/catalogue/the-sandman-vo...
+2026-02-10 09:33:20 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-40.html
+2026-02-10 09:33:20 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.91 сек для http://books.toscrape.com/catalogue/page-40.html... (мета: 1.9139125911278019)
+2026-02-10 09:33:23 [scrapy.extensions.logstats] INFO: Crawled 784 pages (at 43 pages/min), scraped 742 items (at 41 items/min)
+2026-02-10 09:33:37 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #770: http://books.toscrape.com/catalogue/the-autobiography-of-mal... (ожидание: 3 сек)
+2026-02-10 09:33:39 [books_toscrape] INFO: [Книга #750] Обработка: http://books.toscrape.com/catalogue/the-girl-with-all-the-gifts_250/index.html
+2026-02-10 09:33:48 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.41 сек для http://books.toscrape.com/catalogue/the-da-vinci-code-robert... (мета: генерация)
+2026-02-10 09:33:49 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #780: http://books.toscrape.com/catalogue/the-da-vinci-code-robert... (ожидание: 3 сек)
+2026-02-10 09:33:49 [books_toscrape] INFO: [Книга #760] Обработка: http://books.toscrape.com/catalogue/the-last-painting-of-sara-de-vos_259/index.html
+2026-02-10 09:33:50 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:33:50 [books_toscrape] INFO: 📖 КНИГА #760
+2026-02-10 09:33:50 [books_toscrape] INFO:   Заголовок: The Last Painting of Sara de Vos
+2026-02-10 09:33:50 [books_toscrape] INFO:   Цена: 55.55
+2026-02-10 09:33:50 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:33:50 [books_toscrape] INFO:   Количество: 3
+2026-02-10 09:33:50 [books_toscrape] INFO:   Рейтинг: 2
+2026-02-10 09:33:50 [books_toscrape] INFO:   Категория: Historical Fiction
+2026-02-10 09:33:50 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:33:50 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/the-last-painting-of-sara-de-vos_259/index.html
+2026-02-10 09:33:50 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:33:50 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #760: http://books.toscrape.com/catalogue/the-last-paint...
+2026-02-10 09:33:50 [books_toscrape] INFO: [Прогресс] Страниц: 40, Книг: 762, Время: 1109.8 сек, Скорость: 0.69 книг/сек
+2026-02-10 09:33:50 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-41.html
+2026-02-10 09:34:04 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #790: http://books.toscrape.com/catalogue/red-the-true-story-of-re... (ожидание: 3 сек)
+2026-02-10 09:34:05 [books_toscrape] INFO: [Книга #770] Обработка: http://books.toscrape.com/catalogue/the-autobiography-of-malcolm-x_230/index.html
+2026-02-10 09:34:13 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.65 сек для http://books.toscrape.com/catalogue/seven-brief-lessons-on-p... (мета: генерация)
+2026-02-10 09:34:16 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #800: http://books.toscrape.com/catalogue/seven-days-in-the-art-wo... (ожидание: 3 сек)
+2026-02-10 09:34:16 [books_toscrape] INFO: [Книга #780] Обработка: http://books.toscrape.com/catalogue/the-cuckoos-calling-cormoran-strike-1_239/index.html
+2026-02-10 09:34:16 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:34:16 [books_toscrape] INFO: 📖 КНИГА #780
+2026-02-10 09:34:16 [books_toscrape] INFO:   Заголовок: The Cuckoo's Calling (Cormoran Strike #1)
+2026-02-10 09:34:16 [books_toscrape] INFO:   Цена: 19.21
+2026-02-10 09:34:16 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:34:16 [books_toscrape] INFO:   Количество: 3
+2026-02-10 09:34:16 [books_toscrape] INFO:   Рейтинг: 1
+2026-02-10 09:34:16 [books_toscrape] INFO:   Категория: Mystery
+2026-02-10 09:34:16 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:34:16 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/the-cuckoos-calling-cormoran-strike-1_239/index.html
+2026-02-10 09:34:16 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:34:16 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #780: http://books.toscrape.com/catalogue/the-cuckoos-ca...
+2026-02-10 09:34:16 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-42.html
+2026-02-10 09:34:24 [scrapy.extensions.logstats] INFO: Crawled 828 pages (at 44 pages/min), scraped 784 items (at 42 items/min)
+2026-02-10 09:34:27 [books_toscrape.middlewares] INFO: [Прогресс задержек] Запросов: 850, Общая задержка: 1061.4 сек, Средняя: 1.25 сек
+2026-02-10 09:34:31 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #810: http://books.toscrape.com/catalogue/lila-gilead-3_190/index.... (ожидание: 3 сек)
+2026-02-10 09:34:32 [books_toscrape] INFO: [Книга #790] Обработка: http://books.toscrape.com/catalogue/red-the-true-story-of-red-riding-hood_210/index.html
+2026-02-10 09:34:39 [books_toscrape.middlewares] INFO: ⏱️  Задержка 0.72 сек для http://books.toscrape.com/catalogue/neither-here-nor-there-t... (мета: генерация)
+2026-02-10 09:34:42 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #820: http://books.toscrape.com/catalogue/notes-from-a-small-islan... (ожидание: 3 сек)
+2026-02-10 09:34:42 [books_toscrape] INFO: [Книга #800] Обработка: http://books.toscrape.com/catalogue/seven-days-in-the-art-world_220/index.html
+2026-02-10 09:34:42 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:34:42 [books_toscrape] INFO: 📖 КНИГА #800
+2026-02-10 09:34:42 [books_toscrape] INFO:   Заголовок: Seven Days in the Art World
+2026-02-10 09:34:42 [books_toscrape] INFO:   Цена: 52.33
+2026-02-10 09:34:42 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:34:42 [books_toscrape] INFO:   Количество: 3
+2026-02-10 09:34:42 [books_toscrape] INFO:   Рейтинг: 2
+2026-02-10 09:34:42 [books_toscrape] INFO:   Категория: Add a comment
+2026-02-10 09:34:42 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:34:42 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/seven-days-in-the-art-world_220/index.html
+2026-02-10 09:34:42 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:34:42 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #800: http://books.toscrape.com/catalogue/seven-days-in-...
+2026-02-10 09:34:42 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-43.html
+2026-02-10 09:34:55 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #830: http://books.toscrape.com/catalogue/house-of-lost-worlds-din... (ожидание: 3 сек)
+2026-02-10 09:34:56 [books_toscrape] INFO: [Книга #810] Обработка: http://books.toscrape.com/catalogue/lila-gilead-3_190/index.html
+2026-02-10 09:35:02 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.73 сек для http://books.toscrape.com/catalogue/into-the-wild_177/index.... (мета: генерация)
+2026-02-10 09:35:07 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #840: http://books.toscrape.com/catalogue/jurassic-park-jurassic-p... (ожидание: 3 сек)
+2026-02-10 09:35:07 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-44.html
+2026-02-10 09:35:07 [books_toscrape] INFO: [Книга #820] Обработка: http://books.toscrape.com/catalogue/naked_197/index.html
+2026-02-10 09:35:07 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:35:07 [books_toscrape] INFO: 📖 КНИГА #820
+2026-02-10 09:35:07 [books_toscrape] INFO:   Заголовок: Naked
+2026-02-10 09:35:07 [books_toscrape] INFO:   Цена: 31.69
+2026-02-10 09:35:07 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:35:07 [books_toscrape] INFO:   Количество: 3
+2026-02-10 09:35:07 [books_toscrape] INFO:   Рейтинг: 3
+2026-02-10 09:35:07 [books_toscrape] INFO:   Категория: Humor
+2026-02-10 09:35:07 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:35:07 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/naked_197/index.html
+2026-02-10 09:35:07 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:35:07 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #820: http://books.toscrape.com/catalogue/naked_197/inde...
+2026-02-10 09:35:22 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #850: http://books.toscrape.com/catalogue/dracula_150/index.html... (ожидание: 3 сек)
+2026-02-10 09:35:29 [books_toscrape.middlewares] INFO: [Прогресс задержек] Запросов: 900, Общая задержка: 1118.5 сек, Средняя: 1.24 сек
+2026-02-10 09:35:29 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.40 сек для http://books.toscrape.com/catalogue/fifty-shades-freed-fifty... (мета: генерация)
+2026-02-10 09:35:33 [scrapy.extensions.logstats] INFO: Crawled 883 pages (at 55 pages/min), scraped 827 items (at 43 items/min)
+2026-02-10 09:35:33 [books_toscrape] INFO: [Книга #830] Обработка: http://books.toscrape.com/catalogue/into-the-wild_177/index.html
+2026-02-10 09:35:36 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #860: http://books.toscrape.com/catalogue/girl-in-the-blue-coat_16... (ожидание: 3 сек)
+2026-02-10 09:35:36 [books_toscrape] INFO: [Книга #840] Обработка: http://books.toscrape.com/catalogue/jurassic-park-jurassic-park-1_180/index.html
+2026-02-10 09:35:36 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:35:36 [books_toscrape] INFO: 📖 КНИГА #840
+2026-02-10 09:35:36 [books_toscrape] INFO:   Заголовок: Jurassic Park (Jurassic Park #1)
+2026-02-10 09:35:36 [books_toscrape] INFO:   Цена: 44.97
+2026-02-10 09:35:36 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:35:36 [books_toscrape] INFO:   Количество: 3
+2026-02-10 09:35:36 [books_toscrape] INFO:   Рейтинг: 1
+2026-02-10 09:35:36 [books_toscrape] INFO:   Категория: Fiction
+2026-02-10 09:35:36 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:35:36 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/jurassic-park-jurassic-park-1_180/index.html
+2026-02-10 09:35:36 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:35:36 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #840: http://books.toscrape.com/catalogue/jurassic-park-...
+2026-02-10 09:35:36 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-45.html
+2026-02-10 09:35:52 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #870: http://books.toscrape.com/catalogue/black-butler-vol-1-black... (ожидание: 3 сек)
+2026-02-10 09:35:54 [books_toscrape] INFO: [Книга #850] Обработка: http://books.toscrape.com/catalogue/dracula_150/index.html
+2026-02-10 09:35:56 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.91 сек для http://books.toscrape.com/catalogue/brave-enough_135/index.h... (мета: генерация)
+2026-02-10 09:36:04 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #880: http://books.toscrape.com/catalogue/civilization-and-its-dis... (ожидание: 3 сек)
+2026-02-10 09:36:04 [books_toscrape] INFO: [Книга #860] Обработка: http://books.toscrape.com/catalogue/fruits-basket-vol-3-fruits-basket-3_159/index.html
+2026-02-10 09:36:04 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:36:04 [books_toscrape] INFO: 📖 КНИГА #860
+2026-02-10 09:36:04 [books_toscrape] INFO:   Заголовок: Fruits Basket, Vol. 3 (Fruits Basket #3)
+2026-02-10 09:36:04 [books_toscrape] INFO:   Цена: 45.17
+2026-02-10 09:36:04 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:36:04 [books_toscrape] INFO:   Количество: 3
+2026-02-10 09:36:04 [books_toscrape] INFO:   Рейтинг: 2
+2026-02-10 09:36:04 [books_toscrape] INFO:   Категория: Sequential Art
+2026-02-10 09:36:04 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:36:04 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/fruits-basket-vol-3-fruits-basket-3_159/index.html
+2026-02-10 09:36:04 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:36:04 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #860: http://books.toscrape.com/catalogue/fruits-basket-...
+2026-02-10 09:36:04 [books_toscrape] INFO: [Прогресс] Страниц: 45, Книг: 861, Время: 1244.7 сек, Скорость: 0.69 книг/сек
+2026-02-10 09:36:04 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-46.html
+2026-02-10 09:36:18 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #890: http://books.toscrape.com/catalogue/the-sandman-vol-2-the-do... (ожидание: 3 сек)
+2026-02-10 09:36:22 [books_toscrape] INFO: [Книга #870] Обработка: http://books.toscrape.com/catalogue/black-butler-vol-1-black-butler-1_130/index.html
+2026-02-10 09:36:22 [scrapy.extensions.logstats] INFO: Crawled 920 pages (at 37 pages/min), scraped 870 items (at 43 items/min)
+2026-02-10 09:36:23 [books_toscrape.middlewares] INFO: ⏱️  Задержка 0.73 сек для http://books.toscrape.com/catalogue/8-keys-to-mental-health-... (мета: генерация)
+2026-02-10 09:36:31 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #900: http://books.toscrape.com/catalogue/annie-on-my-mind_120/ind... (ожидание: 3 сек)
+2026-02-10 09:36:31 [books_toscrape] INFO: [Книга #880] Обработка: http://books.toscrape.com/catalogue/cinder-the-lunar-chronicles-1_139/index.html
+2026-02-10 09:36:31 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:36:31 [books_toscrape] INFO: 📖 КНИГА #880
+2026-02-10 09:36:31 [books_toscrape] INFO:   Заголовок: Cinder (The Lunar Chronicles #1)
+2026-02-10 09:36:31 [books_toscrape] INFO:   Цена: 26.09
+2026-02-10 09:36:31 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:36:31 [books_toscrape] INFO:   Количество: 3
+2026-02-10 09:36:31 [books_toscrape] INFO:   Рейтинг: 1
+2026-02-10 09:36:31 [books_toscrape] INFO:   Категория: Young Adult
+2026-02-10 09:36:31 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:36:31 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/cinder-the-lunar-chronicles-1_139/index.html
+2026-02-10 09:36:31 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:36:31 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #880: http://books.toscrape.com/catalogue/cinder-the-lun...
+2026-02-10 09:36:31 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-47.html
+2026-02-10 09:36:38 [books_toscrape.middlewares] INFO: [Прогресс задержек] Запросов: 950, Общая задержка: 1182.1 сек, Средняя: 1.24 сек
+2026-02-10 09:36:46 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #910: http://books.toscrape.com/catalogue/travels-with-charley-in-... (ожидание: 3 сек)
+2026-02-10 09:36:46 [books_toscrape] INFO: [Книга #890] Обработка: http://books.toscrape.com/catalogue/kindle-paperwhite-users-guide_103/index.html
+2026-02-10 09:36:50 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.30 сек для http://books.toscrape.com/catalogue/vampire-knight-vol-1-vam... (мета: генерация)
+2026-02-10 09:37:01 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #920: http://books.toscrape.com/catalogue/fruits-basket-vol-2-frui... (ожидание: 3 сек)
+2026-02-10 09:37:01 [books_toscrape] INFO: [Книга #900] Обработка: http://books.toscrape.com/catalogue/annie-on-my-mind_120/index.html
+2026-02-10 09:37:01 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:37:01 [books_toscrape] INFO: 📖 КНИГА #900
+2026-02-10 09:37:01 [books_toscrape] INFO:   Заголовок: Annie on My Mind
+2026-02-10 09:37:01 [books_toscrape] INFO:   Цена: 36.83
+2026-02-10 09:37:01 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:37:01 [books_toscrape] INFO:   Количество: 3
+2026-02-10 09:37:01 [books_toscrape] INFO:   Рейтинг: 5
+2026-02-10 09:37:01 [books_toscrape] INFO:   Категория: Young Adult
+2026-02-10 09:37:01 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:37:01 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/annie-on-my-mind_120/index.html
+2026-02-10 09:37:01 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:37:01 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #900: http://books.toscrape.com/catalogue/annie-on-my-mi...
+2026-02-10 09:37:01 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-48.html
+2026-02-10 09:37:19 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #930: http://books.toscrape.com/catalogue/the-last-girl-the-domini... (ожидание: 3 сек)
+2026-02-10 09:37:19 [books_toscrape] INFO: [Книга #910] Обработка: http://books.toscrape.com/catalogue/twenty-love-poems-and-a-song-of-despair_91/index.html
+2026-02-10 09:37:21 [books_toscrape.middlewares] INFO: ⏱️  Задержка 0.82 сек для http://books.toscrape.com/catalogue/the-little-prince_72/ind... (мета: генерация)
+2026-02-10 09:37:25 [scrapy.extensions.logstats] INFO: Crawled 965 pages (at 45 pages/min), scraped 912 items (at 42 items/min)
+2026-02-10 09:37:27 [books_toscrape] INFO: [Книга #920] Обработка: http://books.toscrape.com/catalogue/diary-of-a-minecraft-zombie-book-1-a-scare-of-a-dare-an-unofficial-minecraft-book_99/index.html
+2026-02-10 09:37:27 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:37:27 [books_toscrape] INFO: 📖 КНИГА #920
+2026-02-10 09:37:27 [books_toscrape] INFO:   Заголовок: Diary of a Minecraft Zombie Book 1: A Scare of a Dare (An Unofficial Minecraft Book)
+2026-02-10 09:37:27 [books_toscrape] INFO:   Цена: 52.88
+2026-02-10 09:37:27 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:37:27 [books_toscrape] INFO:   Количество: 2
+2026-02-10 09:37:27 [books_toscrape] INFO:   Рейтинг: 4
+2026-02-10 09:37:27 [books_toscrape] INFO:   Категория: Childrens
+2026-02-10 09:37:27 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:37:27 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/diary-of-a-minecraft-zombie-book-1-a-scare-of-a-dare-an-unofficial-minecraft-book_99/index.html
+2026-02-10 09:37:27 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:37:27 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #920: http://books.toscrape.com/catalogue/diary-of-a-min...
+2026-02-10 09:37:27 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #940: http://books.toscrape.com/catalogue/the-secret-healer_80/ind... (ожидание: 3 сек)
+2026-02-10 09:37:28 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-49.html
+2026-02-10 09:37:42 [books_toscrape] INFO: [Книга #930] Обработка: http://books.toscrape.com/catalogue/the-last-girl-the-dominion-trilogy-1_70/index.html
+2026-02-10 09:37:44 [books_toscrape.middlewares] INFO: [Прогресс задержек] Запросов: 1000, Общая задержка: 1244.2 сек, Средняя: 1.24 сек
+2026-02-10 09:37:44 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #950: http://books.toscrape.com/catalogue/settling-the-score-the-s... (ожидание: 3 сек)
+2026-02-10 09:37:44 [books_toscrape.middlewares] INFO: ⏱️  Задержка 0.55 сек для http://books.toscrape.com/catalogue/shadow-rites-jane-yellow... (мета: генерация)
+2026-02-10 09:37:56 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #960: http://books.toscrape.com/catalogue/the-bhagavad-gita_60/ind... (ожидание: 3 сек)
+2026-02-10 09:37:56 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-50.html
+2026-02-10 09:37:56 [books_toscrape] INFO: [Книга #940] Обработка: http://books.toscrape.com/catalogue/one-second-seven-7_41/index.html
+2026-02-10 09:37:56 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:37:56 [books_toscrape] INFO: 📖 КНИГА #940
+2026-02-10 09:37:56 [books_toscrape] INFO:   Заголовок: One Second (Seven #7)
+2026-02-10 09:37:56 [books_toscrape] INFO:   Цена: 52.94
+2026-02-10 09:37:56 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:37:56 [books_toscrape] INFO:   Количество: 1
+2026-02-10 09:37:56 [books_toscrape] INFO:   Рейтинг: 2
+2026-02-10 09:37:56 [books_toscrape] INFO:   Категория: Fantasy
+2026-02-10 09:37:56 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:37:56 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/one-second-seven-7_41/index.html
+2026-02-10 09:37:56 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:37:56 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #940: http://books.toscrape.com/catalogue/one-second-sev...
+2026-02-10 09:38:09 [books_toscrape.middlewares] INFO: ⏱️  Задержка 0.84 сек для http://books.toscrape.com/catalogue/lord-of-the-flies_30/ind... (мета: генерация)
+2026-02-10 09:38:10 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #970: http://books.toscrape.com/catalogue/lord-of-the-flies_30/ind... (ожидание: 3 сек)
+2026-02-10 09:38:12 [books_toscrape] INFO: [Книга #950] Обработка: http://books.toscrape.com/catalogue/settling-the-score-the-summer-games-1_50/index.html
+2026-02-10 09:38:22 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #980: http://books.toscrape.com/catalogue/on-the-road-duluoz-legen... (ожидание: 3 сек)
+2026-02-10 09:38:22 [scrapy.extensions.logstats] INFO: Crawled 1011 pages (at 46 pages/min), scraped 958 items (at 46 items/min)
+2026-02-10 09:38:22 [books_toscrape] INFO: [Книга #960] Обработка: http://books.toscrape.com/catalogue/the-bhagavad-gita_60/index.html
+2026-02-10 09:38:22 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:38:22 [books_toscrape] INFO: 📖 КНИГА #960
+2026-02-10 09:38:22 [books_toscrape] INFO:   Заголовок: The Bhagavad Gita
+2026-02-10 09:38:22 [books_toscrape] INFO:   Цена: 57.49
+2026-02-10 09:38:22 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:38:22 [books_toscrape] INFO:   Количество: 1
+2026-02-10 09:38:22 [books_toscrape] INFO:   Рейтинг: 3
+2026-02-10 09:38:22 [books_toscrape] INFO:   Категория: Religion
+2026-02-10 09:38:22 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:38:22 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/the-bhagavad-gita_60/index.html
+2026-02-10 09:38:22 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:38:22 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #960: http://books.toscrape.com/catalogue/the-bhagavad-g...
+2026-02-10 09:38:22 [books_toscrape] INFO: [Прогресс] Страниц: 50, Книг: 960, Время: 1382.5 сек, Скорость: 0.69 книг/сек
+2026-02-10 09:38:22 [books_toscrape] INFO: Пагинация завершена. Все страницы обработаны.
+2026-02-10 09:38:35 [books_toscrape.middlewares] INFO: ⏱️  Задержка 0.65 сек для http://books.toscrape.com/catalogue/bridget-joness-diary-bri... (мета: генерация)
+2026-02-10 09:38:36 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #990: http://books.toscrape.com/catalogue/bridget-joness-diary-bri... (ожидание: 3 сек)
+2026-02-10 09:38:37 [books_toscrape] INFO: [Книга #970] Обработка: http://books.toscrape.com/catalogue/lost-among-the-living_31/index.html
+2026-02-10 09:38:45 [books_toscrape.middlewares] INFO: [Прогресс задержек] Запросов: 1050, Общая задержка: 1302.0 сек, Средняя: 1.24 сек
+2026-02-10 09:38:46 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #1000: http://books.toscrape.com/catalogue/frankenstein_20/index.ht... (ожидание: 3 сек)
+2026-02-10 09:38:46 [books_toscrape] INFO: [Книга #980] Обработка: http://books.toscrape.com/catalogue/on-the-road-duluoz-legend_40/index.html
+2026-02-10 09:38:46 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:38:46 [books_toscrape] INFO: 📖 КНИГА #980
+2026-02-10 09:38:46 [books_toscrape] INFO:   Заголовок: On the Road (Duluoz Legend)
+2026-02-10 09:38:46 [books_toscrape] INFO:   Цена: 32.36
+2026-02-10 09:38:46 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:38:46 [books_toscrape] INFO:   Количество: 1
+2026-02-10 09:38:46 [books_toscrape] INFO:   Рейтинг: 3
+2026-02-10 09:38:46 [books_toscrape] INFO:   Категория: Default
+2026-02-10 09:38:46 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:38:46 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/on-the-road-duluoz-legend_40/index.html
+2026-02-10 09:38:46 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:38:46 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #980: http://books.toscrape.com/catalogue/on-the-road-du...
+2026-02-10 09:38:47 [books_toscrape] INFO: [Книга #990] Обработка: http://books.toscrape.com/catalogue/bridget-joness-diary-bridget-jones-1_10/index.html
+2026-02-10 09:38:47 [books_toscrape] INFO: [Книга #1000] Обработка: http://books.toscrape.com/catalogue/frankenstein_20/index.html
+2026-02-10 09:38:47 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:38:47 [books_toscrape] INFO: 📖 КНИГА #1000
+2026-02-10 09:38:47 [books_toscrape] INFO:   Заголовок: Frankenstein
+2026-02-10 09:38:47 [books_toscrape] INFO:   Цена: 38.0
+2026-02-10 09:38:47 [books_toscrape] INFO:   В наличии: True
+2026-02-10 09:38:47 [books_toscrape] INFO:   Количество: 1
+2026-02-10 09:38:47 [books_toscrape] INFO:   Рейтинг: 2
+2026-02-10 09:38:47 [books_toscrape] INFO:   Категория: Default
+2026-02-10 09:38:47 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 09:38:47 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/frankenstein_20/index.html
+2026-02-10 09:38:47 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 09:38:47 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #1000: http://books.toscrape.com/catalogue/frankenstein_2...
+2026-02-10 09:38:47 [scrapy.core.engine] INFO: Closing spider (finished)
+2026-02-10 09:38:47 [books_toscrape.pipelines] INFO: ✅ Пайплайн 'BooksPostgresPipeline' завершен. Обработано items: 1000
+2026-02-10 09:38:47 [books_toscrape.pipelines] INFO: 📋 Статистика валидации: {'total_processed': 1000, 'inserted': 1000, 'updated': 0, 'success_rate': '100.0%'}
+2026-02-10 09:38:47 [books_toscrape.pipelines] INFO: 📋 Статистика валидации: {'Обработано items': 1000, 'Очищено цен': 0, 'Очищено чисел': 0, 'Исправлено дат': 1000, 'Ошибок валидации': 0, 'Успешность валидации': '100.0%'}
+2026-02-10 09:38:47 [books_toscrape.pipelines] INFO: ✅ Пайплайн 'DataValidationPipeline' завершен. Обработано items: 1000
+2026-02-10 09:38:47 [books_toscrape] INFO: ======================================================================
+2026-02-10 09:38:47 [books_toscrape] INFO: ЗАВЕРШЕНИЕ ПАРСИНГА: books_toscrape
+2026-02-10 09:38:47 [books_toscrape] INFO: ======================================================================
+2026-02-10 09:38:47 [books_toscrape] INFO: Причина: finished
+2026-02-10 09:38:47 [books_toscrape] INFO: Обработано страниц: 50
+2026-02-10 09:38:47 [books_toscrape] INFO: Собрано книг: 1000
+2026-02-10 09:38:47 [books_toscrape] INFO: Общее время: 1407.7 сек
+2026-02-10 09:38:47 [books_toscrape] INFO: Средняя скорость: 0.71 книг/сек
+2026-02-10 09:38:47 [books_toscrape] INFO: Размер файла логов: 1455.34 КБ
+2026-02-10 09:38:47 [books_toscrape] INFO: ======================================================================
+2026-02-10 09:38:47 [scrapy.extensions.feedexport] INFO: Stored json feed (1000 items) in: file:///D:/DE/DE_web_parser/data/books_full.json
+2026-02-10 09:38:47 [books_toscrape.middlewares] INFO: ==================================================
+2026-02-10 09:38:47 [books_toscrape.middlewares] INFO: 📊 СТАТИСТИКА ЗАДЕРЖЕК
+2026-02-10 09:38:47 [books_toscrape.middlewares] INFO: ==================================================
+2026-02-10 09:38:47 [books_toscrape.middlewares] INFO: Всего запросов: 1051
+2026-02-10 09:38:47 [books_toscrape.middlewares] INFO: Общая задержка: 1302.80 сек
+2026-02-10 09:38:47 [books_toscrape.middlewares] INFO: Средняя задержка: 1.24 сек
+2026-02-10 09:38:47 [books_toscrape.middlewares] INFO: Минимальная задержка: 0.52 сек
+2026-02-10 09:38:47 [books_toscrape.middlewares] INFO: Максимальная задержка: 1.96 сек
+2026-02-10 09:38:47 [books_toscrape.middlewares] INFO: Топ-5 самых долгих запросов:
+2026-02-10 09:38:47 [books_toscrape.middlewares] INFO:   1.96 сек: http://books.toscrape.com/catalogue/page-49.html...
+2026-02-10 09:38:47 [books_toscrape.middlewares] INFO:   1.95 сек: http://books.toscrape.com/catalogue/page-11.html...
+2026-02-10 09:38:47 [books_toscrape.middlewares] INFO:   1.95 сек: http://books.toscrape.com/catalogue/page-47.html...
+2026-02-10 09:38:47 [books_toscrape.middlewares] INFO:   1.93 сек: http://books.toscrape.com/catalogue/page-37.html...
+2026-02-10 09:38:47 [books_toscrape.middlewares] INFO:   1.92 сек: http://books.toscrape.com/catalogue/page-6.html...
+2026-02-10 09:38:47 [books_toscrape.middlewares] INFO: ==================================================
+2026-02-10 09:38:47 [books_toscrape.middlewares.selenium] INFO: ==================================================
+2026-02-10 09:38:47 [books_toscrape.middlewares.selenium] INFO: 📊 СТАТИСТИКА SELENIUM
+2026-02-10 09:38:47 [books_toscrape.middlewares.selenium] INFO: ==================================================
+2026-02-10 09:38:47 [books_toscrape.middlewares.selenium] INFO: Всего запросов: 1051
+2026-02-10 09:38:47 [books_toscrape.middlewares.selenium] INFO: Selenium запросов: 1000 (95.1%)
+2026-02-10 09:38:47 [books_toscrape.middlewares.selenium] INFO: Обычных запросов: 51 (4.9%)
+2026-02-10 09:38:47 [books_toscrape.middlewares.selenium] INFO: 💡 Примечание: Selenium использовался для детальных страниц книг
+2026-02-10 09:38:47 [books_toscrape.middlewares.selenium] INFO:    для демонстрации работы с динамическим контентом
+2026-02-10 09:38:47 [books_toscrape.middlewares.selenium] INFO: ==================================================
+2026-02-10 09:38:47 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 433305,
+ 'downloader/request_count': 1051,
+ 'downloader/request_method_count/GET': 1051,
+ 'downloader/response_bytes': 22126419,
+ 'downloader/response_count': 1051,
+ 'downloader/response_status_count/200': 1050,
+ 'downloader/response_status_count/404': 1,
+ 'elapsed_time_seconds': 1405.37897,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2026, 2, 10, 6, 38, 47, 983852, tzinfo=datetime.timezone.utc),
+ 'item_scraped_count': 1000,
+ 'log_count/INFO': 1032,
+ 'log_count/WARNING': 48,
+ 'request_depth_max': 50,
+ 'response_received_count': 1051,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/404': 1,
+ 'scheduler/dequeued': 1050,
+ 'scheduler/dequeued/memory': 1050,
+ 'scheduler/enqueued': 1050,
+ 'scheduler/enqueued/memory': 1050,
+ 'start_time': datetime.datetime(2026, 2, 10, 6, 15, 22, 604882, tzinfo=datetime.timezone.utc)}
+2026-02-10 09:38:47 [scrapy.core.engine] INFO: Spider closed (finished)
+2026-02-10 11:10:03 [scrapy.utils.log] INFO: Scrapy 2.11.0 started (bot: books_scraper)
+2026-02-10 11:10:03 [scrapy.utils.log] INFO: Versions: lxml 6.0.2.0, libxml2 2.11.9, cssselect 1.4.0, parsel 1.11.0, w3lib 2.4.0, Twisted 22.10.0, Python 3.12.7 (tags/v3.12.7:0b05ead, Oct  1 2024, 03:06:41) [MSC v.1941 64 bit (AMD64)], pyOpenSSL 25.3.0 (OpenSSL 3.5.5 27 Jan 2026), cryptography 46.0.4, Platform Windows-10-10.0.19045-SP0
+2026-02-10 11:10:03 [books_toscrape] INFO: Логирование инициализировано. Логи сохраняются в: logs\books_toscrape_20260210_111003.log
+2026-02-10 11:10:03 [scrapy.addons] INFO: Enabled addons:
+[]
+2026-02-10 11:10:03 [py.warnings] WARNING: D:\DE\DE_web_parser\.venv\Lib\site-packages\scrapy\utils\request.py:254: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+2026-02-10 11:10:04 [py.warnings] WARNING: D:\DE\DE_web_parser\.venv\Lib\site-packages\scrapy\extensions\feedexport.py:406: ScrapyDeprecationWarning: The `FEED_URI` and `FEED_FORMAT` settings have been deprecated in favor of the `FEEDS` setting. Please see the `FEEDS` setting docs for more details
+  exporter = cls(crawler)
+
+2026-02-10 11:10:04 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2026-02-10 11:10:04 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'AUTOTHROTTLE_MAX_DELAY': 3.0,
+ 'AUTOTHROTTLE_START_DELAY': 0.5,
+ 'AUTOTHROTTLE_TARGET_CONCURRENCY': 20.0,
+ 'BOT_NAME': 'books_scraper',
+ 'CONCURRENT_REQUESTS': 20,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 20,
+ 'COOKIES_ENABLED': False,
+ 'HTTPCACHE_EXPIRATION_SECS': 3600,
+ 'LOG_FILE': WindowsPath('D:/DE/DE_web_parser/logs/scrapy.log'),
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'books_scraper.spiders',
+ 'RETRY_HTTP_CODES': [500, 502, 503, 504, 408, 429, 403],
+ 'RETRY_TIMES': 3,
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['books_scraper.spiders'],
+ 'TELNETCONSOLE_ENABLED': False,
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'}
+2026-02-10 11:10:04 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: Android
+2026-02-10 11:10:04 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 11:10:04 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 11:10:04 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 11:10:04 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Sony BDV13, Brand: Sony, Model: BDV13
+2026-02-10 11:10:04 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Nintendo DSi, Brand: Nintendo, Model: DSi
+2026-02-10 11:10:04 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 11:10:04 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: Other
+2026-02-10 11:10:04 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: LYF F90M, Brand: LYF, Model: F90M
+2026-02-10 11:10:04 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Sony BDV14, Brand: Sony, Model: BDV14
+2026-02-10 11:10:04 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: LG Web0S SmartTV, Brand: LG, Model: Web0S SmartTV
+2026-02-10 11:10:04 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 11:10:04 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 11:10:04 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 11:10:04 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Sony BDV11, Brand: Sony, Model: BDV11
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Nintendo DSi, Brand: Nintendo, Model: DSi
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: LYF LF-2403N, Brand: LYF, Model: LF-2403N
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: LYF F90M, Brand: LYF, Model: F90M
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: Applebot
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: Applebot
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: Other
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: Other
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: PhantomJS
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: SMTBot
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: PhantomJS
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: PhantomJS
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: WebKit Nightly
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: PhantomJS
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: PhantomJS
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: PhantomJS
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: Robot
+2026-02-10 11:10:05 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedDeviceType] Family: Other, Brand: None, Model: None
+2026-02-10 11:10:06 [scrapy_user_agents.user_agent_picker] WARNING: [UnsupportedBrowserType] Family: Zune
+2026-02-10 11:10:06 [scrapy.middleware] WARNING: Disabled scrapy_selenium.SeleniumMiddleware: SELENIUM_DRIVER_NAME and SELENIUM_DRIVER_EXECUTABLE_PATH must be set
+2026-02-10 11:10:06 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy_user_agents.middlewares.RandomUserAgentMiddleware',
+ 'books_scraper.middlewares.RandomDelayMiddleware',
+ 'books_scraper.middlewares.SeleniumLoggingMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2026-02-10 11:10:06 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2026-02-10 11:10:06 [books_toscrape.pipelines] INFO: 🚀 Запуск пайплайна: DataValidationPipeline
+2026-02-10 11:10:06 [scrapy.middleware] INFO: Enabled item pipelines:
+['books_scraper.pipelines.DataValidationPipeline',
+ 'books_scraper.pipelines.BooksPostgresPipeline']
+2026-02-10 11:10:06 [scrapy.core.engine] INFO: Spider opened
+2026-02-10 11:10:06 [books_toscrape.pipelines] INFO: 🚀 Запуск пайплайна: BooksPostgresPipeline
+2026-02-10 11:10:06 [books_toscrape.pipelines] INFO: 📊 Инициализация БД: Таблица 'raw_books' создана/проверена (27 колонок)
+2026-02-10 11:10:06 [books_toscrape.pipelines] INFO: 🧹 Очистка таблицы 'raw_books': удалено 1000 записей
+2026-02-10 11:10:06 [books_toscrape.pipelines] INFO: 🧹 Очистка таблицы 'raw_books': удалено 1000 записей
+2026-02-10 11:10:06 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2026-02-10 11:10:06 [books_toscrape.middlewares] INFO: ==================================================
+2026-02-10 11:10:06 [books_toscrape.middlewares] INFO: 🎯 ИНИЦИАЛИЗАЦИЯ RANDOM DELAY MIDDLEWARE
+2026-02-10 11:10:06 [books_toscrape.middlewares] INFO: ==================================================
+2026-02-10 11:10:06 [books_toscrape.middlewares] INFO: Диапазон задержек: 0.50 - 2.00 сек
+2026-02-10 11:10:06 [books_toscrape.middlewares] INFO: Базовая задержка: 0.00 сек
+2026-02-10 11:10:06 [books_toscrape.middlewares] INFO: Случайные задержки: True
+2026-02-10 11:10:06 [books_toscrape.middlewares] INFO: Автотроттлинг: True
+2026-02-10 11:10:06 [books_toscrape.middlewares] INFO:   Начальная задержка: 0.5 сек
+2026-02-10 11:10:06 [books_toscrape.middlewares] INFO:   Макс. задержка: 3.0 сек
+2026-02-10 11:10:06 [books_toscrape.middlewares] INFO: ==================================================
+2026-02-10 11:10:06 [books_toscrape.middlewares.selenium] INFO: ==================================================
+2026-02-10 11:10:06 [books_toscrape.middlewares.selenium] INFO: 🔧 НАСТРОЙКИ SELENIUM
+2026-02-10 11:10:06 [books_toscrape.middlewares.selenium] INFO: ==================================================
+2026-02-10 11:10:06 [books_toscrape.middlewares.selenium] INFO: Selenium включен: True
+2026-02-10 11:10:06 [books_toscrape.middlewares.selenium] INFO: Драйвер: chrome
+2026-02-10 11:10:06 [books_toscrape.middlewares.selenium] INFO: Headless режим: True
+2026-02-10 11:10:06 [books_toscrape.middlewares.selenium] INFO: Аргументы: ['--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu']...
+2026-02-10 11:10:06 [books_toscrape.middlewares.selenium] INFO: ==================================================
+2026-02-10 11:10:06 [books_toscrape] INFO: ======================================================================
+2026-02-10 11:10:06 [books_toscrape] INFO: НАЧАЛО ПАРСИНГА: books_toscrape
+2026-02-10 11:10:06 [books_toscrape] INFO: ======================================================================
+2026-02-10 11:10:06 [books_toscrape] INFO: Настройки: Потоков: 20, Задержки: 0.5-2.0 сек
+2026-02-10 11:10:06 [books_toscrape] INFO: ----------------------------------------------------------------------
+2026-02-10 11:10:06 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.48 сек для http://books.toscrape.com/robots.txt... (мета: генерация)
+2026-02-10 11:10:10 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-2.html
+2026-02-10 11:10:23 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #10: http://books.toscrape.com/catalogue/starving-hearts-triangul... (ожидание: 3 сек)
+2026-02-10 11:10:31 [books_toscrape.middlewares] INFO: ⏱️  Задержка 0.75 сек для http://books.toscrape.com/catalogue/soumission_998/index.htm... (мета: генерация)
+2026-02-10 11:10:35 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #20: http://books.toscrape.com/catalogue/a-light-in-the-attic_100... (ожидание: 3 сек)
+2026-02-10 11:10:35 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-3.html
+2026-02-10 11:10:49 [books_toscrape] INFO: [Книга #10] Обработка: http://books.toscrape.com/catalogue/set-me-free_988/index.html
+2026-02-10 11:10:50 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #30: http://books.toscrape.com/catalogue/the-four-agreements-a-pr... (ожидание: 3 сек)
+2026-02-10 11:10:58 [books_toscrape.middlewares] INFO: ⏱️  Задержка 1.42 сек для http://books.toscrape.com/catalogue/chase-me-paris-nights-2_... (мета: генерация)
+2026-02-10 11:11:04 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #40: http://books.toscrape.com/catalogue/in-her-wake_980/index.ht... (ожидание: 3 сек)
+2026-02-10 11:11:04 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-4.html
+2026-02-10 11:11:04 [books_toscrape] INFO: [Книга #20] Обработка: http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html
+2026-02-10 11:11:04 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 11:11:04 [books_toscrape] INFO: 📖 КНИГА #20
+2026-02-10 11:11:04 [books_toscrape] INFO:   Заголовок: A Light in the Attic
+2026-02-10 11:11:04 [books_toscrape] INFO:   Цена: 51.77
+2026-02-10 11:11:04 [books_toscrape] INFO:   В наличии: True
+2026-02-10 11:11:04 [books_toscrape] INFO:   Количество: 22
+2026-02-10 11:11:04 [books_toscrape] INFO:   Рейтинг: 3
+2026-02-10 11:11:04 [books_toscrape] INFO:   Категория: Poetry
+2026-02-10 11:11:04 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 11:11:04 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html
+2026-02-10 11:11:04 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 11:11:04 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #20: http://books.toscrape.com/catalogue/a-light-in-the...
+2026-02-10 11:11:08 [scrapy.extensions.logstats] INFO: Crawled 28 pages (at 28 pages/min), scraped 21 items (at 21 items/min)
+2026-02-10 11:11:12 [books_toscrape.middlewares] INFO: [Прогресс задержек] Запросов: 50, Общая задержка: 61.1 сек, Средняя: 1.22 сек
+2026-02-10 11:11:19 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #50: http://books.toscrape.com/catalogue/unbound-how-eight-techno... (ожидание: 3 сек)
+2026-02-10 11:11:19 [books_toscrape] INFO: [Книга #30] Обработка: http://books.toscrape.com/catalogue/sophies-world_966/index.html
+2026-02-10 11:11:26 [books_toscrape.middlewares] INFO: ⏱️  Задержка 0.87 сек для http://books.toscrape.com/catalogue/without-borders-wanderlo... (мета: генерация)
+2026-02-10 11:11:32 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #60: http://books.toscrape.com/catalogue/slow-states-of-collapse-... (ожидание: 3 сек)
+2026-02-10 11:11:32 [books_toscrape] INFO: [Книга #40] Обработка: http://books.toscrape.com/catalogue/in-her-wake_980/index.html
+2026-02-10 11:11:32 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 11:11:32 [books_toscrape] INFO: 📖 КНИГА #40
+2026-02-10 11:11:32 [books_toscrape] INFO:   Заголовок: In Her Wake
+2026-02-10 11:11:32 [books_toscrape] INFO:   Цена: 12.84
+2026-02-10 11:11:32 [books_toscrape] INFO:   В наличии: True
+2026-02-10 11:11:32 [books_toscrape] INFO:   Количество: 19
+2026-02-10 11:11:32 [books_toscrape] INFO:   Рейтинг: 1
+2026-02-10 11:11:32 [books_toscrape] INFO:   Категория: Thriller
+2026-02-10 11:11:32 [books_toscrape] INFO:   Качество данных: N/A%
+2026-02-10 11:11:32 [books_toscrape] INFO:   URL: http://books.toscrape.com/catalogue/in-her-wake_980/index.html
+2026-02-10 11:11:32 [books_toscrape] INFO: --------------------------------------------------
+2026-02-10 11:11:32 [books_toscrape.pipelines] INFO: 💾 Сохранена книга #40: http://books.toscrape.com/catalogue/in-her-wake_98...
+2026-02-10 11:11:32 [books_toscrape] INFO: Переход на следующую страницу: http://books.toscrape.com/catalogue/page-5.html
+2026-02-10 11:11:47 [books_toscrape.middlewares.selenium] INFO: 🚗 Selenium запрос #70: http://books.toscrape.com/catalogue/the-art-forger_930/index... (ожидание: 3 сек)
+2026-02-10 11:11:47 [books_toscrape] INFO: [Книга #50] Обработка: http://books.toscrape.com/catalogue/unbound-how-eight-technologies-made-us-human-transformed-society-and-brought-our-world-to-the-brink_950/index.html
