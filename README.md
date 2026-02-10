@@ -13,8 +13,8 @@ docker-compose up -d
 cd books_scraper
 
 5. Запуск только 5 записей /  Запуск всех записей
-# scrapy crawl books_toscrape -s CLOSESPIDER_ITEMCOUNT=5 -L INFO
-scrapy crawl books_toscrape
+5.1. scrapy crawl books_toscrape -s CLOSESPIDER_ITEMCOUNT=5 -L INFO
+5.2. scrapy crawl books_toscrape
 
 6. Запуск ETL процесса
 python pyspark_etl.py
