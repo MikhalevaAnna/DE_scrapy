@@ -30,7 +30,6 @@
 DE_scrapy/
 ├── books_scraper/          # Scrapy-скрейпер книг
 │   ├── spiders/           # Пауки для парсинга
-│   ├── items.py           # Определение структуры данных
 │   ├── pipelines.py       # Пайплайны обработки данных
 │   ├── middlewares.py     # Промежуточное ПО
 │   └── settings.py        # Настройки скрейпера
